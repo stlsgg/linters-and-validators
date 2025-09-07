@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: oklch(15% 0.025 228deg);
   color: oklch(96% 0.05 228deg);
