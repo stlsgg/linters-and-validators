@@ -1,12 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-	// Header loading
-	const header = document.querySelector("header");
-	loadComponent("src/layout/header.html", header);
+// Header loading
+const header = document.querySelector("header");
+loadComponent("/src/layout/header.html", header);
 
-	// Footer loading
-	const footer = document.querySelector("footer");
-	loadComponent("src/layout/footer.html", footer);
-});
+// Footer loading
+const footer = document.querySelector("footer");
+loadComponent("/src/layout/footer.html", footer);
+
+// Burger
+initBurgerMenu();
 
 async function loadComponent(componentPath, targetElement) {
 	try {
