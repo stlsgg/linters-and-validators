@@ -16,8 +16,10 @@ async function loadComponent(componentPath, targetElement) {
 		}
 		const html = await response.text();
 		targetElement.outerHTML = html;
+		return true;
 	} catch (error) {
 		console.error("Error loading component:", error);
 		targetElement.outerHTML = "<p>Компонент не загружен</p>";
+		return false;
 	}
 }
