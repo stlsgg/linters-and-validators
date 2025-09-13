@@ -32,7 +32,7 @@ function initBurgerMenu() {
 		console.error(`Burger button not found!`);
 		return false;
 	}
-	burger_button.addEventListener("click", (event) => {
+	burger_button.addEventListener("click", () => {
 		const icons = burger_button.querySelectorAll("i");
 		icons.forEach((icon) => {
 			icon.classList.toggle('d-none');
