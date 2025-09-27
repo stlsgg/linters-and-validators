@@ -27,5 +27,4 @@ dist-ssr
 .stylelintrc.json
 biome.json
 *.map
-*.scss
 *.config.js
