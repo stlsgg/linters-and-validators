@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="src/style.css">
 
   <!-- Main script -->
-   <script src="src/main.js" defer></script>
+  <script src="src/main.js" defer></script>
 
   <title>Main page</title>
 </head>
@@ -25,12 +25,133 @@
 
   <main>
 
-    <!-- Hero block -->
-    <section id="hero-section">
+    <section id="hero" class="hero">
+      <div class="hero-body">
+        <div class="hero-body__left">
+          <h1>Хаос в коде? Линтеры на подходе!</h1>
+
+          <div class="hero__description">
+            <p class="text-muted">Линтеры и валидаторы - ваши надежные помощники в веб-разработке.</p>
+
+            <p>
+              Устали от бесконечной охоты за опечатками, мелкими багами и нарушением стандартов? Наш ресурс поможет вам
+              автоматизировать рутину и понять, как инструменты для проверки кода делают ваш проект стабильнее,
+              чище и профессиональнее.
+            </p>
+          </div>
+
+          <button type="button" class="btn btn-secondary">
+            <b>Изучить инструменты</b>
+          </button>
+        </div>
+
+        <div class="hero-body__right">
+          <span class="hero__icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-this-important">
+      <h2>Зачем тратить время на то, что может сделать за вас машина?</h2>
+
+      <!-- Three tiles with icons and short thesises -->
+      <div class="tiles">
+        <div class="tile">
+          <div class="tile-content">
+            <h3>
+              <span class="icon__border"><i class="fa-solid fa-handshake"></i></span> Согласованность кода
+            </h3>
+            <p>Один проект — десятки правил. Линтеры гарантируют, что вся команда, от стажера до тимлида, пишет код в
+              едином
+              стиле. Это избавляет от бесконечных споров о табуляциях и пробелах в ревью.</p>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile-content">
+            <h3><span class="icon__border"><i class="fa-solid fa-bug-slash"></i></span>Предотвращение багов</h3>
+            <p>Забудьте о синтаксических ошибках, неиспользуемых переменных или неверных селекторах. Инструменты
+              проверки
+              находят проблемные места прямо в редакторе кода, до запуска в браузере.</p>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile-content">
+            <h3><span class="icon__border"><i class="fa-solid fa-globe"></i></span>Качество и доступность</h3>
+            <p>Валидаторы следят за соблюдением стандартов W3C, что напрямую влияет на кроссбраузерность,
+              производительность
+              и, что важно, на доступность (a11y) вашего сайта для всех пользователей.</p>
+          </div>
+        </div>
+      </div>
 
     </section>
 
-    <!-- Arouse interest -->
+
+    <!-- Tools quick explanation -->
+    <!-- TODO create simple cards with button "read more" -->
+    <section id="tools-quick-explanation">
+      <h2>Знакомьтесь с вашими новыми инструментами</h2>
+      <p>Мы подготовили для вас подробные гайды по самым популярным и необходимым инструментам для проверки качества
+        кода. Начните с основ и расширяйте ваш инструментарий.</p>
+
+      <!-- 3 cards of articles, short description, CTA buttons (read more) -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title h5">ESLint</div>
+        </div>
+        <div class="card-body">
+          Статический анализ JavaScript-кода. Находит и исправляет проблемы, навязывает стилистические правила.
+          Негласный стандарт для JS-разработки.
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title h5">Stylelint</div>
+        </div>
+        <div class="card-body">
+          Мощный линтер для CSS/SCSS/Less. Помогает избежать ошибок в стилях, организует порядок свойств и обеспечивает
+          единый стиль написания.
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title h5">W3C Validator</div>
+        </div>
+        <div class="card-body">
+          Официальный валидатор Консорциума Всемирной паутины. Проверяет вашу HTML-разметку на соответствие стандартам.
+          Фундамент валидного и кроссбраузерного веба.
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action block -->
+    <!-- TODO simple question ask and buttons to act -->
+    <section id="call-to-action">
+      <h2>Начните писать код лучше уже сегодня</h2>
+      <p>
+        Не ждите следующего code review, чтобы узнать о пробеле в вашем коде. Интегрируйте эти инструменты в свой
+        workflow и сделайте проверку качества автоматической привычкой.
+      </p>
+
+      <!-- Buttons -->
+      <a href="#" class="btn btn-primary">Перейти ко всем статьям</a>
+      <a href="#" class="btn btn-secondary">Официальные сайты инструментов</a>
+    </section>
   </main>
 
   <footer>
