@@ -1,0 +1,200 @@
+@use 'variables/variables' as vars;
+@use 'variables/typography' as typography;
+@use 'variables/colors' as colors;
+
+$space: 50px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: typography.$font-family;
+    @include typography.body;
+
+    background-color: colors.$bg;
+    color: colors.$text;
+    margin: 0 $space;
+}
+
+// Typography
+.display-lg { @include typography.display-lg }
+.display-md { @include typography.display-md }
+h1 { @include typography.h1; }
+h2 { @include typography.h2; }
+h3 { @include typography.h3; }
+h4 { @include typography.h4; }
+h5 { @include typography.h5; }
+h6 { @include typography.h6; }
+.body-xl { @include typography.body-xl }
+.body { @include typography.body }
+.body-sm { @include typography.body-sm }
+.caption { @include typography.caption }
+.caption-sm { @include typography.caption-sm }
+.overline { @include typography.overline }
+
+
+
+// Loading recolor
+.loading:after {
+    border: .1rem solid colors.$text;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+// Button reconfiguring
+.btn {
+    background-color: colors.$bg;
+    border: 2px solid colors.$border;
+    border-radius: 20px;
+    color: colors.$text;
+
+    height: auto;
+    line-height: 1;
+
+    padding: 12px 25px;
+    margin: 0 15px;
+
+    &:hover {
+        background-color: colors.$bg-light;
+        border: 2px solid colors.$border;
+        cursor: pointer;
+    }
+    &:focus {
+        background: colors.$bg-light;
+        border-color: colors.$primary;
+    }
+}
+
+.btn-primary {
+    @extend .btn;
+
+    border: 2px solid colors.$primary;
+    color: colors.$primary;
+
+    &:hover {
+        border: 2px solid colors.$primary;
+    }
+}
+
+.btn.btn-primary {
+    @extend .btn-primary;
+}
+
+.btn-secondary {
+    @extend .btn;
+
+    border: 2px solid colors.$secondary;
+    color: colors.$secondary;
+
+    &:hover {
+        border: 2px solid colors.$secondary;
+    }
+}
+
+// Navbar: links disable blue color
+.navbar {
+    a {
+        color: colors.$text;
+
+        &:hover {
+            color: colors.$primary;
+        }
+    }
+}
+
+// Header
+.header {
+    display: flex;
+    margin: 20px 0;
+
+    .btn:first-child {
+        margin-left: 0;
+    }
+}
+
+// Burger menu
+.burger__menu {
+    border: solid colors.$border;
+    border-radius: 30px;
+
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    z-index: 9999;
+
+    background-color: colors.$bg;
+
+    padding: 15px 25px;
+
+    p {
+        margin: 0;
+    }
+}
+
+// Hero
+.hero {
+    &-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left {
+            max-width: 50%;
+
+            .btn {
+                margin-left: 0;
+                font-size: typography.$h4-size;
+            }
+        }
+
+        &__right {
+            width: 35%;
+        }
+    }
+
+    // Special size for hero icon
+    &__icon {
+        font-size: 10rem;
+    }
+}
+
+.my_icon {
+    color: colors.$text;
+
+    &__border {
+        border: solid colors.$text thin;
+        border-radius: 20px;
+        padding: 10px;
+    }
+}
+
+.tiles {
+    margin: 20px 0;
+
+    .tile {
+        border: solid colors.$info thin;
+        border-radius: 25px;
+        padding: 10px;
+
+        margin-bottom: 15px;
+    }
+
+    .tile:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// card restyling
+.card {
+  background-color: #00000000;
+}
