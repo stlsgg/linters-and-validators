@@ -1,7 +1,6 @@
 // Header loading
 const header = document.querySelector("header");
-loadComponent("/src/layout/header.html", header)
-.then(() => initBurgerMenu());
+loadComponent("/src/layout/header.html", header).then(() => initBurgerMenu());
 
 // Footer loading
 const footer = document.querySelector("footer");
@@ -33,11 +32,11 @@ function initBurgerMenu() {
 	burger_button.addEventListener("click", () => {
 		const icons = burger_button.querySelectorAll("i");
 		icons.forEach((icon) => {
-			icon.classList.toggle('d-none');
+			icon.classList.toggle("d-none");
 		});
 
-		const burgerMenu = document.querySelector('.burger__menu');
-		burgerMenu.classList.toggle('d-none');
+		const burgerMenu = document.querySelector(".burger__menu");
+		burgerMenu.classList.toggle("d-none");
 	});
 
 	return true;
