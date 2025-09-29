@@ -20,26 +20,8 @@ body {
 
     background-color: colors.$bg;
     color: colors.$text;
-    margin: 0 $space;
+    margin: 0 vars.$space;
 }
-
-// Typography
-.display-lg { @include typography.display-lg }
-.display-md { @include typography.display-md }
-h1 { @include typography.h1; }
-h2 { @include typography.h2; }
-h3 { @include typography.h3; }
-h4 { @include typography.h4; }
-h5 { @include typography.h5; }
-h6 { @include typography.h6; }
-.body-xl { @include typography.body-xl }
-.body { @include typography.body }
-.body-sm { @include typography.body-sm }
-.caption { @include typography.caption }
-.caption-sm { @include typography.caption-sm }
-.overline { @include typography.overline }
-
-
 
 // Loading recolor
 .loading:after {
