@@ -16,7 +16,7 @@
 
 	<main>
 		<h1>Stylelint</h1>
-		<p>Мощный линтер для CSS, помогающий придерживаться правил написания кода и избегать ошибки.</p>
+		<p>Мощный линтер для CSS, помогающий придерживаться правил написания кода и избегать ошибок.</p>
 		<hr>
 
 		<section>
@@ -24,14 +24,16 @@
 			<p>
 				Stylelint — современный инструмент для статического анализа CSS и его диалектов (SCSS, Less, PostCSS и
 				др.), который помогает поддерживать единообразие кода, ловить ошибки и автоматизировать приведение
-				стилиевых файлов к единому стилю.
+				CSS-файлов к единому стилю.
 			</p>
 
-			<p>Stylelint используют такие крупные компании, как Google и Github.</p>
+			<p>
+				Stylelint используется в таких крупных компаниях, как Google и Github.
+			</p>
 		</section>
 
 		<section>
-			<h2>Преимущество использования</h2>
+			<h2>Преимущества использования</h2>
 			<p>Использовать Stylelint стоит по нескольким причинам:</p>
 
 			<ul>
@@ -63,7 +65,7 @@
 				настройки и установки stylelint в проект:
 			</p>
 
-			<!-- pre snippets for different packet managers -->
+			<!-- pre snippets for different package managers -->
 			<p><b>npm</b></p>
 			<pre>
 				npm create stylelint@latest
@@ -128,40 +130,56 @@
 			<p>Далее разберем настройку под редактор кода Visual Studio Code.</p>
 
 			<!-- vscode setup section -->
-			<section>
-				<h4>Настройка под VSCode</h4>
+			<h4>Настройка под VSCode</h4>
 
-				<ol>
-					<li>
-						<p>
-							Откройте вкладку расширений:
-						</p>
+			<ol>
+				<li>
+					<p>
+						Откройте вкладку расширений:
+					</p>
 
-						<img src="/public/images/stylelint_vscode_setup_step1.webp"
-							alt="Открытие вкладки расширений в VSCode" width="750" />
-					</li>
+					<img src="/public/images/stylelint_vscode_setup_step1.webp"
+						alt="Открытие вкладки расширений в VSCode" width="750" />
+				</li>
 
-					<li>
-						<p>
-							Установите расширение <code>stylelint</code>:
-						</p>
+				<li>
+					<p>
+						Установите расширение <code>stylelint</code>:
+					</p>
 
-						<img src="/public/images/stylelint_vscode_setup_step2.webp"
-							alt="Поиск и установка расширения Stylelint в VSCode" width="750" />
-					</li>
+					<img src="/public/images/stylelint_vscode_setup_step2.webp"
+						alt="Поиск и установка расширения Stylelint в VSCode" width="750" />
+				</li>
 
-					<li>
-						<p>Установите <code>stylelint</code> в проект (смотрите шаги выше)</p>
-					</li>
-				</ol>
-			</section>
+				<li>
+					<p>Установите <code>stylelint</code> в проект (смотрите шаги выше)</p>
+				</li>
+			</ol>
 
 			<h3>Конфигурация</h3>
 			<p>
 				Stylelint требует, чтобы в вашем проекте был конфиг файл.
 			</p>
 			<p>
-				Stylelint, начиная с текущей рабочей директории, начинает искать файл <code>stylelint.config.js</code>
+				Stylelint, начиная с текущей рабочей директории, начинает искать файл <code>stylelint.config.js</code>.
+				Рекомендуется хранить конфигурацию в корне проекта.
+			</p>
+
+			<p>Пример базовой конфигурации:</p>
+			<pre>
+				/** @type {import('stylelint').Config} */
+				export default {
+					rules: {
+						"block-no-empty": true
+					}
+				};
+			</pre>
+
+			<p>
+				Ознакомиться с полным списком возможных настроек можно на официальном сайте -
+				<a href="https://stylelint.io/user-guide/configure"><b>Официальное руководство по конфигурации
+						(stylelint.io)</b>
+				</a>
 			</p>
 		</section>
 
@@ -170,7 +188,8 @@
 			<h2>Заключение</h2>
 			<p>
 				Stylelint — мощный инструмент, повышающий качество CSS-кода и упрощающий командную работу. Грамотная
-				интеграция с форматтерами, редакторами и CI позволяет автоматизировать большую часть рутинных проверок и
+				интеграция с форматтерами, редакторами и CI позволяет автоматизировать большую часть рутинных
+				проверок и
 				сосредоточиться на дизайне и логике, а не на стиле файла.
 			</p>
 		</section>
