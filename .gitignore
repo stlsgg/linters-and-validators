@@ -28,3 +28,6 @@ dist-ssr
 biome.json
 *.map
 *.config.js
+
+# For development reasons, untrack all css files.
+*.css
