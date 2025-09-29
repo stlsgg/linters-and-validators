@@ -8,6 +8,19 @@
     box-sizing: border-box;
 }
 
+// Disable underline for anchors; recolor spectre.css
+a {
+    color: colors.$primary;
+    text-decoration: none;
+
+    &:visited,
+    &:hover,
+    &:focus {
+        color: colors.$primary;
+        text-decoration: none;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
