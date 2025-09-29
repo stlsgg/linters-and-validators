@@ -223,3 +223,10 @@ body {
 
     &__left {}
 }
+
+// Header
+.header {
+    &__container {
+        border-bottom: 1px solid colors.$border;
+    }
+}
