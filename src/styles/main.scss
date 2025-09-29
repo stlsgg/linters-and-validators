@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    font-family: typography.$font-family;
-    @include typography.body;
+    font-family: vars.$font-family;
+    @include vars.body;
 
     background-color: colors.$bg;
     color: colors.$text;
@@ -46,6 +46,7 @@ body {
         border: 2px solid colors.$border;
         cursor: pointer;
     }
+
     &:focus {
         background: colors.$bg-light;
         border-color: colors.$primary;
@@ -133,7 +134,7 @@ body {
 
             .btn {
                 margin-left: 0;
-                font-size: typography.$h4-size;
+                font-size: vars.$h4-size;
             }
         }
 
@@ -176,5 +177,5 @@ body {
 
 // card restyling
 .card {
-  background-color: #00000000;
+    background-color: #00000000;
 }
