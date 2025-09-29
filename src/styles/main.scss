@@ -179,3 +179,35 @@ body {
 .card {
     background-color: #00000000;
 }
+
+// Footer
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid colors.$text;
+        margin-top: 20px;
+        padding: 15px;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: color-mix(in oklch, colors.$primary 70%, black 30%);
+        }
+
+        color: colors.$text-muted;
+    }
+
+    &__right {
+        // space
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {}
+}
