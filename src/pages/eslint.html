@@ -163,9 +163,11 @@
 			<h2>Быстрая настройка</h2>
 
 			<h3>Установка</h3>
-			<pre><code>npm install eslint --save-dev
+			<pre class="code">
+<code>npm install eslint --save-dev
 # или
-yarn add eslint --dev</code></pre>
+yarn add eslint --dev
+</code></pre>
 
 			<h3>Инициализация конфигурации</h3>
 			<pre><code>npx eslint --init</code></pre>
@@ -173,22 +175,23 @@ yarn add eslint --dev</code></pre>
 			<p>Мастер задаст вопросы о вашем проекте и создаст файл <code>.eslintrc.js</code>.</p>
 
 			<h3>Пример конфигурации</h3>
-			<pre><code>module.exports = {
-    env: {
-        browser: true,
-        es2021: true
-    },
-    extends: [
-        'eslint:recommended'
-    ],
-    parserOptions: {
-        ecmaVersion: 12,
-        sourceType: 'module'
-    },
-    rules: {
-        'semi': ['error', 'always'],
-        'quotes': ['error', 'single']
-    }
+			<pre class="code">
+<code>module.exports = {
+env: {
+	browser: true,
+	es2021: true
+},
+extends: [
+	'eslint:recommended'
+],
+parserOptions: {
+	ecmaVersion: 12,
+	sourceType: 'module'
+},
+rules: {
+	'semi': ['error', 'always'],
+	'quotes': ['error', 'single']
+}
 };</code></pre>
 		</section>
 

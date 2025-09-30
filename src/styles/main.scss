@@ -239,3 +239,16 @@ samp {
         border-bottom: 1px solid colors.$border;
     }
 }
+
+// Code: inline and blocks
+code {
+    background: colors.$bg-light;
+    color: colors.$code;
+}
+
+.code {
+    code {
+        background: colors.$bg-light;
+        color: colors.$code;
+    }
+}
