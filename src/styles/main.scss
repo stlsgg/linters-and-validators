@@ -137,9 +137,9 @@ body {
 
 // Hero
 .hero {
+    max-width: 65%;
     &-body {
         display: flex;
-        align-items: center;
 
         &__left {
             max-width: 50%;
