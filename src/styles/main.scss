@@ -256,4 +256,13 @@ code {
 // Main section
 .main {
     margin: 50px 0;
+
+    &__intro {
+        margin-bottom: 25px;
+    }
+
+    &__body {
+        margin: 20px 0;
+    }
 }
+
