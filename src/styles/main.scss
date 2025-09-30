@@ -26,12 +26,20 @@ html {
 }
 
 body {
-    font-family: vars.$font-family;
+    font-family: vars.$font-general;
     @include vars.body;
 
     background-color: colors.$bg;
     color: colors.$text;
     margin: 0 vars.$space;
+}
+
+// Font family for monospaced
+pre,
+code,
+kbd,
+samp {
+    font-family: vars.$font-monospaced;
 }
 
 // Loading recolor
