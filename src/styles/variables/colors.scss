@@ -13,3 +13,7 @@ $danger: oklch(0.7 0.05 30);
 $warning: oklch(0.7 0.05 100);
 $success: oklch(0.7 0.05 160);
 $info: oklch(0.7 0.05 260);
+
+// Colors, based on main colors
+$code: color-mix(in oklch, $text 70%, black 30%);
+$text-dimmed: color-mix(in oklch, $primary 70%, black 30%);

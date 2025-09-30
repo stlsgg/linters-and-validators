@@ -146,6 +146,7 @@ samp {
 // Hero
 .hero {
     max-width: 65%;
+
     &-body {
         display: flex;
 
@@ -216,7 +217,7 @@ samp {
         }
 
         a {
-            color: color-mix(in oklch, colors.$primary 70%, black 30%);
+            color: colors.$text-dimmed;
         }
 
         color: colors.$text-muted;
