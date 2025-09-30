@@ -259,6 +259,39 @@ code {
 
     &__intro {
         margin-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 1px solid colors.$border;
+
+        .intro {
+            &__text {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+
+            .intro {
+
+                &__text {
+                    order: 2;
+                    max-width: 100%;
+                }
+
+                &__img {
+                    order: 1;
+                    margin-bottom: 20px;
+                }
+                
+            }
+
+        }
     }
 
     &__body {
