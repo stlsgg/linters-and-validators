@@ -17,3 +17,7 @@ $info: oklch(0.7 0.05 260);
 // Colors, based on main colors
 $code: color-mix(in oklch, $text 70%, black 30%);
 $text-dimmed: color-mix(in oklch, $primary 70%, black 30%);
+
+// Links
+$link: $primary;
+$link-heavy: color-mix(in oklch, $link 65%, black 35%);
