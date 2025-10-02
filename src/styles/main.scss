@@ -1,2 +1,10 @@
-@use 'fonts';
-@use 'base';
+@use 'base/fonts';
+
+@use 'base/reset';
+@use 'base/global';
+@use 'base/typography';
+
+@use 'UI/button';
+@use 'components/links';
+@use 'components/header';
+@use 'components/footer';
