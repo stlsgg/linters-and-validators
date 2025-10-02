@@ -1,0 +1,15 @@
+// Font declaration file
+// General font - Nunito Sans; monospaced - Source Code Pro
+@font-face {
+    font-family: "Nunito Sans";
+    src:
+        local("Nunito Sans"),
+        url("/src/vendor/fonts/nunito_sans/nunito_sans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src:
+        local("Source Code Pro"),
+        url("/src/vendor/fonts/source_code_pro/source_code_pro.ttf") format("truetype");
+}
