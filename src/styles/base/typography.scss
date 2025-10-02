@@ -184,3 +184,71 @@ $overline-letter-spacing: 0.03em;
     line-height: $overline-line-height;
     letter-spacing: $overline-letter-spacing;
 }
+
+// Setup
+.display-lg {
+    @include display-lg
+}
+
+.display-md {
+    @include display-md
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+h6 {
+    @include h6;
+}
+
+.body-xl {
+    @include body-xl
+}
+
+.body {
+    @include body
+}
+
+.body-sm {
+    @include body-sm
+}
+
+.caption {
+    @include caption
+}
+
+.caption-sm {
+    @include caption-sm
+}
+
+.overline {
+    @include overline
+}
+
+p {
+    @include body;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: $font-monospaced;
+}
