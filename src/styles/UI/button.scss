@@ -1,0 +1,61 @@
+@use '../variables/colors' as color;
+
+.btn {
+    all: reset;
+
+    background-color: color.$bg;
+    border: 2px solid color.$border;
+    border-radius: 20px;
+    color: color.$text;
+
+    height: auto;
+    line-height: 1;
+
+    padding: 12px 25px;
+    margin: 0 15px;
+
+    &:hover {
+        @extend .btn;
+        background-color: color.$bg-light;
+        border: 2px solid color.$border;
+        cursor: pointer;
+    }
+
+    &:focus {
+        @extend .btn;
+
+        background: color.$bg-light;
+        border-color: color.$primary;
+    }
+
+    &:active {
+        @extend .btn;
+        background: color.$text;
+        color: color.$bg;
+        border-color: color.$border;
+    }
+
+    &-primary {
+        all: reset;
+        @extend .btn;
+
+        border: 2px solid color.$primary;
+        color: color.$primary;
+
+        &:hover {
+            border: 2px solid color.$primary;
+        }
+    }
+
+    &-secondary {
+        all: reset;
+        @extend .btn;
+
+        border: 2px solid color.$secondary;
+        color: color.$secondary;
+
+        &:hover {
+            border: 2px solid color.$secondary;
+        }
+    }
+}
