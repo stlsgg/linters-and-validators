@@ -1,0 +1,14 @@
+@use '../variables/colors' as color;
+@use 'typography' as tpg;
+
+// Global rules
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: tpg.$font-general;
+
+    background-color: color.$bg;
+    color: color.$text;
+}
