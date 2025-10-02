@@ -1,0 +1,15 @@
+@use '../variables/colors' as color;
+
+a {
+    all: reset;
+    color: color.$link;
+    outline: 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+}

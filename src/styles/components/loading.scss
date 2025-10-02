@@ -1,0 +1,6 @@
+// Loading recolor
+.loading:after {
+    border: .1rem solid colors.$text;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}

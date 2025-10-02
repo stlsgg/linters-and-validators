@@ -1,0 +1,15 @@
+.tiles {
+    margin: 20px 0;
+
+    .tile {
+        border: solid colors.$info thin;
+        border-radius: 25px;
+        padding: 10px;
+
+        margin-bottom: 15px;
+    }
+
+    .tile:last-child {
+        margin-bottom: 0;
+    }
+}

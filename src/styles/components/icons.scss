@@ -1,0 +1,9 @@
+.my_icon {
+    color: colors.$text;
+
+    &__border {
+        border: solid colors.$text thin;
+        border-radius: 20px;
+        padding: 10px;
+    }
+}

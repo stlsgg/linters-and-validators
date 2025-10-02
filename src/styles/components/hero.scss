@@ -1,0 +1,26 @@
+// Hero
+.hero {
+    max-width: 65%;
+
+    &-body {
+        display: flex;
+
+        &__left {
+            max-width: 50%;
+
+            .btn {
+                margin-left: 0;
+                font-size: vars.$h4-size;
+            }
+        }
+
+        &__right {
+            width: 35%;
+        }
+    }
+
+    // Special size for hero icon
+    &__icon {
+        font-size: 10rem;
+    }
+}
