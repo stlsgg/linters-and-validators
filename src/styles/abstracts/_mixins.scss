@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin display-lg {
     font-size: $display-lg-size;
     font-weight: $display-lg-weight;
