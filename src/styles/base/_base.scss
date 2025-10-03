@@ -1,0 +1,16 @@
+@use '../variables/colors' as color;
+@use '../variables/general' as general;
+@use 'typography' as tpg;
+
+// Global rules
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: tpg.$font-general;
+
+    background-color: color.$bg;
+    color: color.$text;
+    margin: 0 general.$space;
+}
