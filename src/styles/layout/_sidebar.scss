@@ -4,6 +4,12 @@
     padding: 10px 20px;
     width: fit-content;
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+
+    // deadly simple animation
+    transition: right 0.3 ease-in;
 
     // remove dots in li elements
     ul {
@@ -12,8 +18,6 @@
 
     &--active {
         @extend .sidebar;
-        top: 50%;
-        transform: translateY(-50%);
         right: 0;
     }
 }
