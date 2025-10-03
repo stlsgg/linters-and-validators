@@ -1,23 +1,28 @@
-@use 'base/fonts';
+@import 'themes/dark';
 
-@use 'base/reset';
-@use 'base/global';
-@use 'base/typography';
+@import 'vendors/spectre',
+'vendors/spectre_overrides';
 
-@use 'UI/button';
-@use 'components/cards';
-@use 'components/code';
-@use 'components/footer';
-@use 'components/header';
-@use 'components/hero';
-@use 'components/icons';
-@use 'components/links';
-@use 'components/loading';
-@use 'components/navbar';
-@use 'components/tiles';
+@import 'base/normalize',
+'base/font',
+'base/typography',
+'base/base';
 
+@import 'components/button',
+'components/card',
+'components/code',
+'components/icon',
+'components/link',
+'components/loading',
+'components/navbar',
+'components/tile';
 
-@use 'variables/colors' as color;
+@import 'layout/footer',
+'layout/header',
+'layout/hero',
+'layout/navbar',
+'layout/sidebar';
+
 
 // Main section
 .article {
