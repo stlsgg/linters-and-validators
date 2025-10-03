@@ -1,4 +1,5 @@
 @use '../variables/colors' as color;
+@use '../variables/general' as general;
 @use 'typography' as tpg;
 
 // Global rules
@@ -11,4 +12,5 @@ body {
 
     background-color: color.$bg;
     color: color.$text;
+    margin: 0 general.$space;
 }
