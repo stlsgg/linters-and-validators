@@ -1,6 +1,19 @@
 .sidebar {
+    border: 2px solid $border;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: fit-content;
+    position: fixed;
+
     // remove dots in li elements
     ul {
         list-style-type: none;
+    }
+
+    &--active {
+        @extend .sidebar;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
     }
 }
