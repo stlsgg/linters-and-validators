@@ -64,3 +64,11 @@ kbd,
 samp {
     font-family: $font-monospaced;
 }
+
+ol {
+    list-style: decimal;
+}
+
+pre {
+    align-items: start;
+}
