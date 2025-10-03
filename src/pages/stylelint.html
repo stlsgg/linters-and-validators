@@ -107,12 +107,11 @@
 				<ol>
 					<li>
 						<p>Создайте конфиг <code>stylelint.config.js</code> в корне проекта со следующим содержимым:</p>
-						<pre>
-						/** @type {import('stylelint').Config} */
-						export default {
-						extends: ["stylelint-config-standard"]
-						};
-					</pre>
+<pre class="code"><code>/** @type {import('stylelint').Config} */
+export default {
+  extends: ["stylelint-config-standard"]
+};</code>
+</pre>
 					</li>
 
 					<li>
@@ -121,17 +120,16 @@
 							необходимые
 							зависимости:
 						</p>
-						<pre>
-						npm add -D stylelint stylelint-config-standard
-					</pre>
+<pre class="code"><code>npm add -D stylelint stylelint-config-standard
+</code>
+</pre>
 					</li>
 				</ol>
 
 				<h3>Использование</h3>
 				<p>Ручной вызов stylelint через терминал (CLI):</p>
-				<pre>
-				npx stylelint "**/*.css"
-			</pre>
+<pre class="code"><code>npx stylelint "**/*.css"</code>
+</pre>
 
 				<p>
 					Stylelint совместим со многими редакторами кода, т.е. его можно настроить для IDE таким образом,
@@ -185,14 +183,13 @@
 				</p>
 
 				<p>Пример базовой конфигурации:</p>
-				<pre>
-				/** @type {import('stylelint').Config} */
-				export default {
-					rules: {
-						"block-no-empty": true
-					}
-				};
-			</pre>
+<pre class="code"><code>/** @type {import('stylelint').Config} */
+export default {
+  rules: {
+    "block-no-empty": true
+  }
+};</code>
+</pre>
 
 				<p>
 					Ознакомиться с полным списком возможных настроек можно на официальном сайте -
