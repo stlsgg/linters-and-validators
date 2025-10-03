@@ -1,3 +1,5 @@
+@use '../base/typography' as tpg;
+
 // Hero
 .hero {
     max-width: 65%;
@@ -10,7 +12,7 @@
 
             .btn {
                 margin-left: 0;
-                font-size: vars.$h4-size;
+                font-size: tpg.$h4-size;
             }
         }
 
