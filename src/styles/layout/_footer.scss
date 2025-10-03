@@ -1,0 +1,31 @@
+@use '../variables/colors' as color;
+
+// Footer
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid color.$border;
+        margin-top: 20px;
+        padding: 15px;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: color.$text-dimmed;
+        }
+
+        color: color.$text-muted;
+    }
+
+    &__right {
+        // space
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
