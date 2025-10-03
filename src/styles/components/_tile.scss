@@ -1,10 +1,8 @@
-@use '../variables/colors' as color;
-
 .tiles {
     margin: 20px 0;
 
     .tile {
-        border: solid color.$info thin;
+        border: solid $info thin;
         border-radius: 25px;
         padding: 10px;
 

@@ -1,6 +1,6 @@
 @use 'abstracts/all' as *;
 
-@import 'themes/dark';
+@use 'themes/dark' as *;
 
 @import 'vendors/spectre',
 'vendors/spectre_overrides';
@@ -37,7 +37,7 @@
         justify-content: space-between;
         align-items: center;
 
-        border-bottom: 1px solid color.$border;
+        border-bottom: 1px solid $border;
 
         .intro {
             &__text {

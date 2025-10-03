@@ -1,14 +1,12 @@
-@use '../variables/colors' as color;
-
 // Code: inline and blocks
 code {
-    background: color.$bg-light;
-    color: color.$code;
+    background: $bg-light;
+    color: $code;
 }
 
 .code {
     code {
-        background: color.$bg-light;
-        color: color.$code;
+        background: $bg-light;
+        color: $code;
     }
 }

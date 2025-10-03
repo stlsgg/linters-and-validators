@@ -1,5 +1,3 @@
-@use '../variables/colors' as color;
-
 // Footer
 .footer {
     &__container {
@@ -7,7 +5,7 @@
         justify-content: space-between;
         align-items: center;
 
-        border-top: 1px solid color.$border;
+        border-top: 1px solid $border;
         margin-top: 20px;
         padding: 15px;
 
@@ -16,10 +14,10 @@
         }
 
         a {
-            color: color.$text-dimmed;
+            color: $text-dimmed;
         }
 
-        color: color.$text-muted;
+        color: $text-muted;
     }
 
     &__right {

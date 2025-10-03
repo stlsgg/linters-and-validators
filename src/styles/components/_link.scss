@@ -1,8 +1,6 @@
-@use '../variables/colors' as color;
-
 a {
     all: reset;
-    color: color.$link;
+    color: $link;
     outline: 0;
 
     &:hover,

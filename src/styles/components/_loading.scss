@@ -1,8 +1,6 @@
-@use '../variables/colors' as color;
-
 // Loading recolor
 .loading:after {
-    border: .1rem solid color.$text;
+    border: .1rem solid $text;
     border-top-color: transparent;
     border-right-color: transparent;
 }

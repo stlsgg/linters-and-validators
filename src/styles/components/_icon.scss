@@ -1,10 +1,8 @@
-@use '../variables/colors' as color;
-
 .my_icon {
-    color: color.$text;
+    color: $text;
 
     &__border {
-        border: solid color.$text thin;
+        border: solid $text thin;
         border-radius: 20px;
         padding: 10px;
     }

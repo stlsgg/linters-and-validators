@@ -1,12 +1,10 @@
-@use '../variables/colors' as color;
-
 // Navbar: links disable blue color
 .navbar {
     a {
-        color: color.$text;
+        color: $text;
 
         &:hover {
-            color: color.$primary;
+            color: $primary;
         }
     }
 }
