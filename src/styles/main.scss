@@ -23,70 +23,8 @@
 'layout/header',
 'layout/hero',
 'layout/navbar',
-'layout/sidebar';
-
-
-// Main section
-.article {
-    margin: 50px 0;
-
-    &__intro {
-        margin-bottom: 25px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        border-bottom: 1px solid $border;
-
-        .intro {
-            &__text {
-                display: flex;
-                flex-direction: column;
-                max-width: 600px;
-            }
-        }
-
-        .intro__img {
-            width: 100%;
-        }
-
-        .intro__preview {
-            min-width: 300px;
-        }
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-
-            .intro {
-
-                &__text {
-                    order: 2;
-                    max-width: 100%;
-                }
-
-                &__preview {
-                    order: 1;
-                    margin-bottom: 20px;
-                    display: flex;
-                    width: 70%;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                &__img {
-                    max-width: 70%;
-                }
-
-            }
-
-        }
-    }
-
-    &__body {
-        margin: 20px 0;
-    }
-}
+'layout/sidebar',
+'layout/article';
 
 ol {
     list-style: decimal;
