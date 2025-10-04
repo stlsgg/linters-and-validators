@@ -24,26 +24,17 @@
 		<article>
 			<h1>ESLint: статический анализ JavaScript кода</h1>
 			<p>Находите и исправляйте ошибки до запуска кода. Стандарт для профессиональной JavaScript-разработки.</p>
-
-			<nav class="toc">
-				<h2>Содержание</h2>
-				<ul>
-					<li><a href="#what-is">Что такое ESLint?</a></li>
-					<li><a href="#why-needed">Зачем нужен ESLint?</a></li>
-					<li><a href="#rules-table">Популярные правила ESLint</a></li>
-					<li><a href="#setup">Быстрая настройка</a></li>
-					<li><a href="#integration">Интеграция с редакторами</a></li>
-					<li><a href="#advanced">Продвинутое использование</a></li>
-				</ul>
-			</nav>
 			<hr>
 
-			<section id="what-is">
-				<h2>Что такое ESLint?</h2>
-				<p><strong>ESLint</strong> — это статический анализатор кода для JavaScript, который помогает находить
-					проблемные участки кода, не соответствующие заданным правилам.</p>
+			<section>
+				<h2 id="what-is">Что такое ESLint?</h2>
+				<p>
+					<strong>ESLint</strong> — это популярный линтер для JavaScript и TypeScript, который помогает
+					находить ошибки, несоответствия стандартам и автоматически исправлять часть из них. Он стал
+					неотъемлемой частью современного подхода в разработке веб-приложений.
+				</p>
 
-				<p>В отличие от валидаторов, которые проверяют синтаксис, ESLint анализирует:</p>
+				<p>В отличие от валидаторов, которые проверяют только синтаксис, ESLint анализирует:</p>
 				<ul>
 					<li>Стиль кодирования</li>
 					<li>Потенциальные ошибки</li>
@@ -53,187 +44,176 @@
 				</ul>
 			</section>
 
-			<section id="why-needed">
-				<h2>Зачем нужен ESLint?</h2>
+			<section>
+				<h2 id="why-needed">Зачем нужен ESLint?</h2>
+
+				<h3 id="short-explain">Коротко</h3>
 
 				<div class="benefits-grid">
 					<div class="benefit">
-						<h3>Предотвращение ошибок</h3>
-						<p>Находит типичные ошибки до запуска кода: необъявленные переменные, неиспользуемые импорты,
-							dead
-							code.</p>
+						<h4>Предотвращает ошибки</h4>
+						<p>Поиск чего-нибудь типичного, например, необъявленные переменные, неиспользуемые
+							импорты, мертвый (ненужный) код.</p>
 					</div>
 
 					<div class="benefit">
-						<h3>Единый стиль кода</h3>
+						<h4>Формирует единый стиль</h4>
 						<p>Гарантирует, что вся команда пишет код в одном стиле, независимо от предпочтений
 							разработчиков.
 						</p>
 					</div>
 
 					<div class="benefit">
-						<h3>Качество кода</h3>
-						<p>Помогает избегать антипаттернов и писать более поддерживаемый код.</p>
+						<h4>Повышает качество</h4>
+						<p>
+							Помогает избегать антипаттернов и писать поддерживаемый код.
+						</p>
 					</div>
 
 					<div class="benefit">
-						<h3>Экономия времени</h3>
-						<p>Автоматически исправляет многие проблемы, избавляя от рутины.</p>
+						<h4>Экономит время</h4>
+						<p>
+							Автоматически исправляет многие типичные проблемы, избавляя от рутины - мелкие опечатки,
+							неиспользуемые переменные, перевод функций в современный стандарт (использование стрелочных
+							функций).
+						</p>
 					</div>
 				</div>
+
+				<p>А теперь копнем глубже!</p>
+
+				<h3 id="long-explain">Подробно</h3>
+
+				<p>
+					Когда над проектом работает несколько человек, их кодовый стиль неизбежно отличается. Один ставит
+					точки с запятой, другой — нет; кто-то предпочитает двойные кавычки, кто-то — одинарные. Разработчики
+					по-разному могут называть переменные, следовать разным принципам программирования. Даже если удаётся
+					договориться о базовых правилах и стандартах, мелких расхождений избежать не получится — со временем
+					код всё равно станет трудночитаемым и непоследовательным.
+				</p>
+
+				<p>
+					ESLint помогает решить эту проблему: он берёт на себя проверку кода на соответствие правилам,
+					установленным командой, компанией или тимлидом. Автоматически анализируя код, инструмент
+					обеспечивает единообразие, повышает предсказуемость и снижает вероятность ошибок.
+				</p>
+
+				<p>
+					ESlint имеет как встроенные правила, так и позволяет создавать собственные. Так, если зайти на
+					ресурс <a href="https://www.npmjs.com/" target="_blank">npmjs</a> и написать
+					<code>eslint rules</code>, мы сможем найти популярные правила сообщества, правила от
+					крупных компаний.
+				</p>
+
+				<blockquote>
+					ESLint сам по себе не распространяет правила на <a href="https://www.npmjs.com/"
+						target="_blank">npmjs</a>. Просто там публикуются плагины и
+					наборы
+					конфигураций. Вы можете хранить и распространять свои конфигурации и на другом ресурсе, если это
+					необходимо, например, в рамках приватности.
+				</blockquote>
+
 			</section>
 
-			<section id="rules-table">
-				<h2>Популярные правила ESLint</h2>
-				<p>ESLint предлагает сотни правил. Вот самые полезные из них:</p>
-
-				<div class="table-container">
-					<table>
-						<thead>
-							<tr>
-								<th>Правило</th>
-								<th>Категория</th>
-								<th>Описание</th>
-								<th>Пример ошибки</th>
-								<th>Исправление</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><code>no-unused-vars</code></td>
-								<td>Возможные ошибки</td>
-								<td>Запрещает неиспользуемые переменные</td>
-								<td><code>const x = 10;</code> (x не используется)</td>
-								<td>Удалить переменную или использовать</td>
-							</tr>
-							<tr>
-								<td><code>eqeqeq</code></td>
-								<td>Лучшие практики</td>
-								<td>Требует строгого равенства (=== вместо ==)</td>
-								<td><code>if (a == b) {}</code></td>
-								<td><code>if (a === b) {}</code></td>
-							</tr>
-							<tr>
-								<td><code>semi</code></td>
-								<td>Стиль</td>
-								<td>Требует/запрещает точку с запятой</td>
-								<td><code>const a = 1</code> (нет ;)</td>
-								<td><code>const a = 1;</code></td>
-							</tr>
-							<tr>
-								<td><code>quotes</code></td>
-								<td>Стиль</td>
-								<td>Определяет тип кавычек</td>
-								<td><code>const msg = "hello";</code></td>
-								<td><code>const msg = 'hello';</code></td>
-							</tr>
-							<tr>
-								<td><code>no-console</code></td>
-								<td>Лучшие практики</td>
-								<td>Запрещает console.log в продакшене</td>
-								<td><code>console.log('debug');</code></td>
-								<td>Удалить или использовать логгер</td>
-							</tr>
-							<tr>
-								<td><code>indent</code></td>
-								<td>Стиль</td>
-								<td>Контролирует отступы</td>
-								<td><code>function() {\nconsole.log();\n}</code></td>
-								<td><code>function() {\n  console.log();\n}</code></td>
-							</tr>
-							<tr>
-								<td><code>comma-dangle</code></td>
-								<td>Стиль</td>
-								<td>Висячие запятые в объектах/массивах</td>
-								<td><code>const obj = {a: 1};</code></td>
-								<td><code>const obj = {a: 1,};</code></td>
-							</tr>
-							<tr>
-								<td><code>prefer-const</code></td>
-								<td>ES6</td>
-								<td>Заменяет let на const если переменная не переопределяется</td>
-								<td><code>let x = 5;</code></td>
-								<td><code>const x = 5;</code></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section>
-
-			<section id="setup">
-				<h2>Быстрая настройка</h2>
-
+			<section>
+				<h2 id="quick-start">Быстрый старт</h2>
 				<h3>Установка</h3>
-				<pre class="code">
-<code>npm install eslint --save-dev
-# или
-yarn add eslint --dev
-</code></pre>
+				<p>
+					Для того, чтобы установить ESLint, следуйте простым шагам:
+				</p>
+				<ol>
+					<li>
+						<h4 id="check-requirements">Проверка зависимостей</h4>
+						<h5 id="package-manager-req">Пакетный менеджер</h5>
+						<p>
+							Убедитесь, что у вас установлен пакетный менеджер — это может быть <code>npm</code>,
+							<code>pnpm</code>, <code>yarn</code>, <code>bun</code> или <code>deno</code>. Если пакетного
+							менеджера ещё нет, начните с <code>npm</code> — это простой и надёжный вариант для новичков.
+							<a href="/src/pages/npm-guide.html">Гайд по установке <code>npm</code></a>.
+						</p>
+						<blockquote>
+							<p>
+								Почему я советую <code>npm</code> для новичков? Все просто.
+							</p>
+							<p>
+								Во-первых, <code>npm</code> идет из коробки при установке <a
+									href="#nodejs-req">Nodejs</a>.
+							</p>
+							<p>
+								Во-вторых:
+								я пока неглубоко разбираюсь в пакетных менеджерах. Возможно, со временем перейду на
+								другой
+								— более безопасный или быстрый. Но сейчас моя цель — разрабатывать веб-приложения, и для
+								этого <code>npm</code> вполне подходит. Он популярен и прост — этого
+								мне
+								достаточно.
+							</p>
+						</blockquote>
 
-				<h3>Инициализация конфигурации</h3>
-				<pre><code>npx eslint --init</code></pre>
+						<h5 id="nodejs-req">Nodejs</h5>
+						<p>
+							<code>eslint</code> требует наличия <a href="https://nodejs.org" target="_blank">Nodejs</a>.
+							Убедитесь, что у вас установлено необходимое <abbr
+								title="Программное обеспечение">ПО</abbr>.
+						</p>
 
-				<p>Мастер задаст вопросы о вашем проекте и создаст файл <code>.eslintrc.js</code>.</p>
+						<h4 id="init-project-req">Инициализированный проект</h4>
+						<p>Перейдите в корень вашего проекта или создайте новый проект. Создайте
+							<code>package.json</code> через установленный пакетный менеджер:
+						</p>
+					</li>
 
-				<h3>Пример конфигурации</h3>
-				<pre class="code">
-<code>module.exports = {
-env: {
-	browser: true,
-	es2021: true
-},
-extends: [
-	'eslint:recommended'
-],
-parserOptions: {
-	ecmaVersion: 12,
-	sourceType: 'module'
-},
-rules: {
-	'semi': ['error', 'always'],
-	'quotes': ['error', 'single']
-}
-};</code></pre>
-			</section>
+					<li>
+						<h4 id="eslint-project-init">Инициализация <code>eslint</code></h4>
+						<p>Инициализируйте <code>eslint</code> в корне вашего проекта:</p>
+						<pre
+							class="code"><code>npm init @eslint/config@latest # либо укажите конкретную версию</code></pre>
+						<p>
+							Установщик задаст несколько вопросов: на чем пишется проект (TypeScript или JavaScript),
+							какой фреймворк используется (Vue, React, Vanilla и т.д.), в каком формате сохранить
+							конфигурацию.
+						</p>
+						<blockquote><strong>Важно</strong>: <code>npm init @eslint/config</code> предполагает, что у вас
+							в проекте уже есть файл <code>package.json</code>. Если у вас нет такого файла,
+							<a href="#init-project-req">проинициализируйте проект</a>.
+						</blockquote>
+					</li>
+				</ol>
 
-			<section id="integration">
-				<h2>Интеграция с редакторами</h2>
+				<p>
+					Это все! После установки в корне вашего проекта появится конфигурационный файл
+					<code>eslint.config.js</code>, в котором можно настраивать поведение линтера в рамках проекта.
+				</p>
 
-				<h3>VS Code</h3>
-				<p>Установите расширение <strong>ESLint</strong>. Ошибки будут подсвечиваться прямо в редакторе.</p>
+				<h3>Использование</h3>
+				<p>
+					Чтобы воспользоваться <code>eslint</code>, можно использовать командный интерфейс (<abbr
+						title="Command Line Interface">CLI</abbr>) команды. Ниже даны примеры базового использования.
+				</p>
+				<h4>Синтаксис</h4>
+				<p>
+					Большинство пользователей используют <a href="https://docs.npmjs.com/cli/v8/commands/npx"
+						target="_blank">npx</a> для запуска ESLint:
+				</p>
+				<pre class="code"><code>npx eslint [options] [file|dir|glob]*</code></pre>
 
-				<h3>WebStorm</h3>
-				<p>Встроенная поддержка ESLint. Включите в Settings → Languages & Frameworks → JavaScript → Code Quality
-					Tools → ESLint.</p>
-
-				<h3>Автоисправление</h3>
-				<p>Большинство редакторов поддерживают автоисправление при сохранении:</p>
-				<pre><code>// VS Code - добавить в settings.json
-"editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-}</code></pre>
-			</section>
-
-			<section id="advanced">
-				<h2>Продвинутое использование</h2>
-
-				<h3>Популярные конфигурации</h3>
+				<h4>Примеры</h4>
 				<ul>
-					<li><strong>Airbnb</strong> — строгий и полный стиль</li>
-					<li><strong>Standard</strong> — без точек с запятой, минимальная конфигурация</li>
-					<li><strong>Google</strong> — стиль Google для JavaScript</li>
+					<li>
+						<p>Проверить два файла:</p>
+						<pre class="code"><code>npx eslint file1.js file2.js</code></pre>
+					</li>
+					<li>
+						<p>Проверить несколько файлов в директории <code>lib</code>:</p>
+						<pre class="code"><code>npx eslint lib/**</code></pre>
+					</li>
 				</ul>
 
-				<h3>Интеграция с Prettier</h3>
-				<p>Используйте <code>eslint-config-prettier</code> для отключения правил ESLint, которые конфликтуют с
-					Prettier.</p>
-
-				<h3>Плагины для фреймворков</h3>
-				<ul>
-					<li><code>eslint-plugin-react</code> — правила для React</li>
-					<li><code>eslint-plugin-vue</code> — правила для Vue.js</li>
-					<li><code>@typescript-eslint/eslint-plugin</code> — правила для TypeScript</li>
-				</ul>
+				<p>
+					Более подробно ознакомиться с параметрами командного интерфейса вы можете на официальной
+					документации ESLint - <a href="https://eslint.org/docs/latest/use/command-line-interface"
+						target="_blank">eslint.org/docs/latest/use/command-line-interface</a>
+				</p>
 			</section>
 
 			<section id="tutorials">
@@ -243,7 +223,7 @@ rules: {
 					ESLint вместе с <a href="/src/pages/prettier.html">Prettier</a> в роли форматтера.
 				</p>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/E2tbZoTjcQA?si=GyfRad-Jj4fOKZro"
-					title="YouTube video player" frameborder="0"
+					title="YouTube video player"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</section>
