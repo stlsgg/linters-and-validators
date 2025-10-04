@@ -20,4 +20,4 @@ $text-dimmed: color-mix(in oklch, $primary 70%, black 30%);
 
 // Links
 $link: $primary;
-$link-heavy: color-mix(in oklch, $link 65%, black 35%);
+$link-hover: color-mix(in oklch, $link 65%, black 35%);
