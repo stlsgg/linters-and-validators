@@ -20,4 +20,15 @@
         @extend .sidebar;
         right: 0;
     }
+
+    button {
+        background-color: transparent;
+        border: none;
+
+        svg {
+            fill: white;
+            width: 40px;
+            rotate: 180deg;
+        }
+    }
 }
