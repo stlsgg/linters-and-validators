@@ -4,22 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Spectre.css framework -->
-	<link rel="stylesheet" href="/src/vendor/spectre.css/spectre.min.css">
-	<link rel="stylesheet" href="../vendor/spectre.css/spectre-icons.min.css">
 
 	<!-- Main style -->
 	<link rel="stylesheet" href="/src/style.css">
 
 	<!-- main js -->
-	<script src="/src/main.js" defer></script>
+	<script src="/src/main.js" defer type="module"></script>
 	<title>Stylelint - линтер для CSS</title>
 </head>
 
 <body>
 
 	<header>
-        <div class="loading loading-lg"></div>
+		<div class="loading loading-lg"></div>
 	</header>
 
 	<main class="article">
@@ -108,7 +105,7 @@
 				<ol>
 					<li>
 						<p>Создайте конфиг <code>stylelint.config.js</code> в корне проекта со следующим содержимым:</p>
-<pre class="code"><code>/** @type {import('stylelint').Config} */
+						<pre class="code"><code>/** @type {import('stylelint').Config} */
 export default {
   extends: ["stylelint-config-standard"]
 };</code>
@@ -121,7 +118,7 @@ export default {
 							необходимые
 							зависимости:
 						</p>
-<pre class="code"><code>npm add -D stylelint stylelint-config-standard
+						<pre class="code"><code>npm add -D stylelint stylelint-config-standard
 </code>
 </pre>
 					</li>
@@ -129,7 +126,7 @@ export default {
 
 				<h3>Использование</h3>
 				<p>Ручной вызов stylelint через терминал (CLI):</p>
-<pre class="code"><code>npx stylelint "**/*.css"</code>
+				<pre class="code"><code>npx stylelint "**/*.css"</code>
 </pre>
 
 				<p>
@@ -184,7 +181,7 @@ export default {
 				</p>
 
 				<p>Пример базовой конфигурации:</p>
-<pre class="code"><code>/** @type {import('stylelint').Config} */
+				<pre class="code"><code>/** @type {import('stylelint').Config} */
 export default {
   rules: {
     "block-no-empty": true
@@ -214,7 +211,7 @@ export default {
 	</main>
 
 	<footer>
-        <div class="loading loading-lg"></div>
+		<div class="loading loading-lg"></div>
 	</footer>
 
 </body>
