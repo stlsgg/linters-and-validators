@@ -23,6 +23,11 @@
 
         .intro__preview {
             min-width: 300px;
+
+            svg {
+                min-width: 300px;
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {
