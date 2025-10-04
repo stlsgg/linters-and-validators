@@ -21,159 +21,162 @@
 	</header>
 
 	<main>
-		<h1>ESLint: статический анализ JavaScript кода</h1>
-		<p>Находите и исправляйте ошибки до запуска кода. Стандарт для профессиональной JavaScript-разработки.</p>
+		<article>
+			<h1>ESLint: статический анализ JavaScript кода</h1>
+			<p>Находите и исправляйте ошибки до запуска кода. Стандарт для профессиональной JavaScript-разработки.</p>
 
-		<nav class="toc">
-			<h2>Содержание</h2>
-			<ul>
-				<li><a href="#what-is">Что такое ESLint?</a></li>
-				<li><a href="#why-needed">Зачем нужен ESLint?</a></li>
-				<li><a href="#rules-table">Популярные правила ESLint</a></li>
-				<li><a href="#setup">Быстрая настройка</a></li>
-				<li><a href="#integration">Интеграция с редакторами</a></li>
-				<li><a href="#advanced">Продвинутое использование</a></li>
-			</ul>
-		</nav>
-		<hr>
+			<nav class="toc">
+				<h2>Содержание</h2>
+				<ul>
+					<li><a href="#what-is">Что такое ESLint?</a></li>
+					<li><a href="#why-needed">Зачем нужен ESLint?</a></li>
+					<li><a href="#rules-table">Популярные правила ESLint</a></li>
+					<li><a href="#setup">Быстрая настройка</a></li>
+					<li><a href="#integration">Интеграция с редакторами</a></li>
+					<li><a href="#advanced">Продвинутое использование</a></li>
+				</ul>
+			</nav>
+			<hr>
 
-		<section id="what-is">
-			<h2>Что такое ESLint?</h2>
-			<p><strong>ESLint</strong> — это статический анализатор кода для JavaScript, который помогает находить
-				проблемные участки кода, не соответствующие заданным правилам.</p>
+			<section id="what-is">
+				<h2>Что такое ESLint?</h2>
+				<p><strong>ESLint</strong> — это статический анализатор кода для JavaScript, который помогает находить
+					проблемные участки кода, не соответствующие заданным правилам.</p>
 
-			<p>В отличие от валидаторов, которые проверяют синтаксис, ESLint анализирует:</p>
-			<ul>
-				<li>Стиль кодирования</li>
-				<li>Потенциальные ошибки</li>
-				<li>Проблемы с архитектурой</li>
-				<li>Неиспользуемый код</li>
-				<li>Сложность функций</li>
-			</ul>
-		</section>
+				<p>В отличие от валидаторов, которые проверяют синтаксис, ESLint анализирует:</p>
+				<ul>
+					<li>Стиль кодирования</li>
+					<li>Потенциальные ошибки</li>
+					<li>Проблемы с архитектурой</li>
+					<li>Неиспользуемый код</li>
+					<li>Сложность функций</li>
+				</ul>
+			</section>
 
-		<section id="why-needed">
-			<h2>Зачем нужен ESLint?</h2>
+			<section id="why-needed">
+				<h2>Зачем нужен ESLint?</h2>
 
-			<div class="benefits-grid">
-				<div class="benefit">
-					<h3>Предотвращение ошибок</h3>
-					<p>Находит типичные ошибки до запуска кода: необъявленные переменные, неиспользуемые импорты, dead
-						code.</p>
+				<div class="benefits-grid">
+					<div class="benefit">
+						<h3>Предотвращение ошибок</h3>
+						<p>Находит типичные ошибки до запуска кода: необъявленные переменные, неиспользуемые импорты,
+							dead
+							code.</p>
+					</div>
+
+					<div class="benefit">
+						<h3>Единый стиль кода</h3>
+						<p>Гарантирует, что вся команда пишет код в одном стиле, независимо от предпочтений
+							разработчиков.
+						</p>
+					</div>
+
+					<div class="benefit">
+						<h3>Качество кода</h3>
+						<p>Помогает избегать антипаттернов и писать более поддерживаемый код.</p>
+					</div>
+
+					<div class="benefit">
+						<h3>Экономия времени</h3>
+						<p>Автоматически исправляет многие проблемы, избавляя от рутины.</p>
+					</div>
 				</div>
+			</section>
 
-				<div class="benefit">
-					<h3>Единый стиль кода</h3>
-					<p>Гарантирует, что вся команда пишет код в одном стиле, независимо от предпочтений разработчиков.
-					</p>
+			<section id="rules-table">
+				<h2>Популярные правила ESLint</h2>
+				<p>ESLint предлагает сотни правил. Вот самые полезные из них:</p>
+
+				<div class="table-container">
+					<table>
+						<thead>
+							<tr>
+								<th>Правило</th>
+								<th>Категория</th>
+								<th>Описание</th>
+								<th>Пример ошибки</th>
+								<th>Исправление</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>no-unused-vars</code></td>
+								<td>Возможные ошибки</td>
+								<td>Запрещает неиспользуемые переменные</td>
+								<td><code>const x = 10;</code> (x не используется)</td>
+								<td>Удалить переменную или использовать</td>
+							</tr>
+							<tr>
+								<td><code>eqeqeq</code></td>
+								<td>Лучшие практики</td>
+								<td>Требует строгого равенства (=== вместо ==)</td>
+								<td><code>if (a == b) {}</code></td>
+								<td><code>if (a === b) {}</code></td>
+							</tr>
+							<tr>
+								<td><code>semi</code></td>
+								<td>Стиль</td>
+								<td>Требует/запрещает точку с запятой</td>
+								<td><code>const a = 1</code> (нет ;)</td>
+								<td><code>const a = 1;</code></td>
+							</tr>
+							<tr>
+								<td><code>quotes</code></td>
+								<td>Стиль</td>
+								<td>Определяет тип кавычек</td>
+								<td><code>const msg = "hello";</code></td>
+								<td><code>const msg = 'hello';</code></td>
+							</tr>
+							<tr>
+								<td><code>no-console</code></td>
+								<td>Лучшие практики</td>
+								<td>Запрещает console.log в продакшене</td>
+								<td><code>console.log('debug');</code></td>
+								<td>Удалить или использовать логгер</td>
+							</tr>
+							<tr>
+								<td><code>indent</code></td>
+								<td>Стиль</td>
+								<td>Контролирует отступы</td>
+								<td><code>function() {\nconsole.log();\n}</code></td>
+								<td><code>function() {\n  console.log();\n}</code></td>
+							</tr>
+							<tr>
+								<td><code>comma-dangle</code></td>
+								<td>Стиль</td>
+								<td>Висячие запятые в объектах/массивах</td>
+								<td><code>const obj = {a: 1};</code></td>
+								<td><code>const obj = {a: 1,};</code></td>
+							</tr>
+							<tr>
+								<td><code>prefer-const</code></td>
+								<td>ES6</td>
+								<td>Заменяет let на const если переменная не переопределяется</td>
+								<td><code>let x = 5;</code></td>
+								<td><code>const x = 5;</code></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+			</section>
 
-				<div class="benefit">
-					<h3>Качество кода</h3>
-					<p>Помогает избегать антипаттернов и писать более поддерживаемый код.</p>
-				</div>
+			<section id="setup">
+				<h2>Быстрая настройка</h2>
 
-				<div class="benefit">
-					<h3>Экономия времени</h3>
-					<p>Автоматически исправляет многие проблемы, избавляя от рутины.</p>
-				</div>
-			</div>
-		</section>
-
-		<section id="rules-table">
-			<h2>Популярные правила ESLint</h2>
-			<p>ESLint предлагает сотни правил. Вот самые полезные из них:</p>
-
-			<div class="table-container">
-				<table>
-					<thead>
-						<tr>
-							<th>Правило</th>
-							<th>Категория</th>
-							<th>Описание</th>
-							<th>Пример ошибки</th>
-							<th>Исправление</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><code>no-unused-vars</code></td>
-							<td>Возможные ошибки</td>
-							<td>Запрещает неиспользуемые переменные</td>
-							<td><code>const x = 10;</code> (x не используется)</td>
-							<td>Удалить переменную или использовать</td>
-						</tr>
-						<tr>
-							<td><code>eqeqeq</code></td>
-							<td>Лучшие практики</td>
-							<td>Требует строгого равенства (=== вместо ==)</td>
-							<td><code>if (a == b) {}</code></td>
-							<td><code>if (a === b) {}</code></td>
-						</tr>
-						<tr>
-							<td><code>semi</code></td>
-							<td>Стиль</td>
-							<td>Требует/запрещает точку с запятой</td>
-							<td><code>const a = 1</code> (нет ;)</td>
-							<td><code>const a = 1;</code></td>
-						</tr>
-						<tr>
-							<td><code>quotes</code></td>
-							<td>Стиль</td>
-							<td>Определяет тип кавычек</td>
-							<td><code>const msg = "hello";</code></td>
-							<td><code>const msg = 'hello';</code></td>
-						</tr>
-						<tr>
-							<td><code>no-console</code></td>
-							<td>Лучшие практики</td>
-							<td>Запрещает console.log в продакшене</td>
-							<td><code>console.log('debug');</code></td>
-							<td>Удалить или использовать логгер</td>
-						</tr>
-						<tr>
-							<td><code>indent</code></td>
-							<td>Стиль</td>
-							<td>Контролирует отступы</td>
-							<td><code>function() {\nconsole.log();\n}</code></td>
-							<td><code>function() {\n  console.log();\n}</code></td>
-						</tr>
-						<tr>
-							<td><code>comma-dangle</code></td>
-							<td>Стиль</td>
-							<td>Висячие запятые в объектах/массивах</td>
-							<td><code>const obj = {a: 1};</code></td>
-							<td><code>const obj = {a: 1,};</code></td>
-						</tr>
-						<tr>
-							<td><code>prefer-const</code></td>
-							<td>ES6</td>
-							<td>Заменяет let на const если переменная не переопределяется</td>
-							<td><code>let x = 5;</code></td>
-							<td><code>const x = 5;</code></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</section>
-
-		<section id="setup">
-			<h2>Быстрая настройка</h2>
-
-			<h3>Установка</h3>
-			<pre class="code">
+				<h3>Установка</h3>
+				<pre class="code">
 <code>npm install eslint --save-dev
 # или
 yarn add eslint --dev
 </code></pre>
 
-			<h3>Инициализация конфигурации</h3>
-			<pre><code>npx eslint --init</code></pre>
+				<h3>Инициализация конфигурации</h3>
+				<pre><code>npx eslint --init</code></pre>
 
-			<p>Мастер задаст вопросы о вашем проекте и создаст файл <code>.eslintrc.js</code>.</p>
+				<p>Мастер задаст вопросы о вашем проекте и создаст файл <code>.eslintrc.js</code>.</p>
 
-			<h3>Пример конфигурации</h3>
-			<pre class="code">
+				<h3>Пример конфигурации</h3>
+				<pre class="code">
 <code>module.exports = {
 env: {
 	browser: true,
@@ -191,59 +194,60 @@ rules: {
 	'quotes': ['error', 'single']
 }
 };</code></pre>
-		</section>
+			</section>
 
-		<section id="integration">
-			<h2>Интеграция с редакторами</h2>
+			<section id="integration">
+				<h2>Интеграция с редакторами</h2>
 
-			<h3>VS Code</h3>
-			<p>Установите расширение <strong>ESLint</strong>. Ошибки будут подсвечиваться прямо в редакторе.</p>
+				<h3>VS Code</h3>
+				<p>Установите расширение <strong>ESLint</strong>. Ошибки будут подсвечиваться прямо в редакторе.</p>
 
-			<h3>WebStorm</h3>
-			<p>Встроенная поддержка ESLint. Включите в Settings → Languages & Frameworks → JavaScript → Code Quality
-				Tools → ESLint.</p>
+				<h3>WebStorm</h3>
+				<p>Встроенная поддержка ESLint. Включите в Settings → Languages & Frameworks → JavaScript → Code Quality
+					Tools → ESLint.</p>
 
-			<h3>Автоисправление</h3>
-			<p>Большинство редакторов поддерживают автоисправление при сохранении:</p>
-			<pre><code>// VS Code - добавить в settings.json
+				<h3>Автоисправление</h3>
+				<p>Большинство редакторов поддерживают автоисправление при сохранении:</p>
+				<pre><code>// VS Code - добавить в settings.json
 "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
 }</code></pre>
-		</section>
+			</section>
 
-		<section id="advanced">
-			<h2>Продвинутое использование</h2>
+			<section id="advanced">
+				<h2>Продвинутое использование</h2>
 
-			<h3>Популярные конфигурации</h3>
-			<ul>
-				<li><strong>Airbnb</strong> — строгий и полный стиль</li>
-				<li><strong>Standard</strong> — без точек с запятой, минимальная конфигурация</li>
-				<li><strong>Google</strong> — стиль Google для JavaScript</li>
-			</ul>
+				<h3>Популярные конфигурации</h3>
+				<ul>
+					<li><strong>Airbnb</strong> — строгий и полный стиль</li>
+					<li><strong>Standard</strong> — без точек с запятой, минимальная конфигурация</li>
+					<li><strong>Google</strong> — стиль Google для JavaScript</li>
+				</ul>
 
-			<h3>Интеграция с Prettier</h3>
-			<p>Используйте <code>eslint-config-prettier</code> для отключения правил ESLint, которые конфликтуют с
-				Prettier.</p>
+				<h3>Интеграция с Prettier</h3>
+				<p>Используйте <code>eslint-config-prettier</code> для отключения правил ESLint, которые конфликтуют с
+					Prettier.</p>
 
-			<h3>Плагины для фреймворков</h3>
-			<ul>
-				<li><code>eslint-plugin-react</code> — правила для React</li>
-				<li><code>eslint-plugin-vue</code> — правила для Vue.js</li>
-				<li><code>@typescript-eslint/eslint-plugin</code> — правила для TypeScript</li>
-			</ul>
-		</section>
+				<h3>Плагины для фреймворков</h3>
+				<ul>
+					<li><code>eslint-plugin-react</code> — правила для React</li>
+					<li><code>eslint-plugin-vue</code> — правила для Vue.js</li>
+					<li><code>@typescript-eslint/eslint-plugin</code> — правила для TypeScript</li>
+				</ul>
+			</section>
 
-		<section id="tutorials">
-			<h2>Видеогайд</h2>
-			<p>
-				Не до конца понятно из объяснения? Посмотри 20-минутное видео, где подробно показано, как настроить
-				ESLint вместе с <a href="/src/pages/prettier.html">Prettier</a> в роли форматтера.
-			</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/E2tbZoTjcQA?si=GyfRad-Jj4fOKZro"
-				title="YouTube video player" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</section>
+			<section id="tutorials">
+				<h2>Видеогайд</h2>
+				<p>
+					Не до конца понятно из объяснения? Посмотри 20-минутное видео, где подробно показано, как настроить
+					ESLint вместе с <a href="/src/pages/prettier.html">Prettier</a> в роли форматтера.
+				</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/E2tbZoTjcQA?si=GyfRad-Jj4fOKZro"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</section>
+		</article>
 	</main>
 
 	<footer>
