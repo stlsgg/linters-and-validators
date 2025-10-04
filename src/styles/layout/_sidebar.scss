@@ -1,12 +1,8 @@
 .sidebar {
-    border: 2px solid $border;
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: fit-content;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    right: -100%;
+    right: -19%;
 
     // deadly simple animation
     transition: right 0.3 ease-in;
