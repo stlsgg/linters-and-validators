@@ -65,6 +65,13 @@ samp {
     font-family: $font-monospaced;
 }
 
+ul,
+ol {
+    p {
+        font-size: inherit;
+    }
+}
+
 ol {
     list-style: decimal;
 }
