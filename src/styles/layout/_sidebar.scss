@@ -31,4 +31,20 @@
             rotate: 180deg;
         }
     }
+
+    display: flex;
+    align-items: center;
+
+    &__switch {
+        border: 2px solid $border;
+        border-radius: 20px;
+        height: min-content;
+    }
+
+    &__navigation {
+        border: 2px solid $border;
+        border-radius: 20px;
+        padding: 10px 20px;
+        width: fit-content;
+    }
 }
