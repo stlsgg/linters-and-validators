@@ -20,169 +20,179 @@
 		<div class="loading loading-lg"></div>
 	</header>
 
-	<main class="article">
-		<div class="article__intro">
-			<div class="intro__text">
-				<h1>Stylelint</h1>
-				<p>Мощный линтер для CSS, помогающий придерживаться правил написания кода и избегать ошибок.</p>
+	<main>
+		<article class="article">
+			<div class="article__intro">
+				<div class="intro__text">
+					<h1>Stylelint</h1>
+					<p>Мощный линтер для CSS, помогающий придерживаться правил написания кода и избегать ошибок.</p>
+				</div>
+
+				<div class="intro__preview">
+					<img src="/public/images/stylelint/icons/dark.svg" alt="Stylelint Logo" class="intro__img" />
+				</div>
 			</div>
 
-			<div class="intro__preview">
-				<img src="/public/images/stylelint/icons/dark.svg" alt="Stylelint Logo" class="intro__img" />
-			</div>
-		</div>
+			<div class="article__body">
+				<section>
+					<h2>Что это такое?</h2>
+					<p>
+						Stylelint — современный инструмент для статического анализа CSS и его диалектов (SCSS, Less,
+						PostCSS
+						и
+						др.), который помогает поддерживать единообразие кода, ловить ошибки и автоматизировать
+						приведение
+						CSS-файлов к единому стилю.
+					</p>
 
-		<div class="article__body">
-			<section>
-				<h2>Что это такое?</h2>
-				<p>
-					Stylelint — современный инструмент для статического анализа CSS и его диалектов (SCSS, Less, PostCSS
-					и
-					др.), который помогает поддерживать единообразие кода, ловить ошибки и автоматизировать приведение
-					CSS-файлов к единому стилю.
-				</p>
+					<p>
+						Stylelint используется в таких крупных компаниях, как Google и Github.
+					</p>
+				</section>
 
-				<p>
-					Stylelint используется в таких крупных компаниях, как Google и Github.
-				</p>
-			</section>
+				<section>
+					<h2>Преимущества использования</h2>
+					<p>Использовать Stylelint стоит по нескольким причинам:</p>
 
-			<section>
-				<h2>Преимущества использования</h2>
-				<p>Использовать Stylelint стоит по нескольким причинам:</p>
+					<ul>
+						<li>
+							<b>Поиск ошибок:</b> обнаруживает синтаксические ошибки и потенциальные баги (неправильные
+							значения,
+							дублирование свойств).
+						</li>
+						<li>
+							<b>Единый стиль:</b> гарантирует согласованный стиль кода в команде (отступы, кавычки,
+							порядок
+							свойств).
+						</li>
+						<li>
+							<b>Автоматизация:</b> интегрируется с редакторами и CI, может автоматически исправлять
+							многие
+							простые нарушения.
+						</li>
+						<li>
+							<b>Расширяемость:</b> множество готовых правил и плагинов (например, для BEM, по
+							использованию
+							кастомных свойств, по порядку CSS-свойств).
+						</li>
+					</ul>
+				</section>
 
-				<ul>
-					<li>
-						<b>Поиск ошибок:</b> обнаруживает синтаксические ошибки и потенциальные баги (неправильные
-						значения,
-						дублирование свойств).
-					</li>
-					<li>
-						<b>Единый стиль:</b> гарантирует согласованный стиль кода в команде (отступы, кавычки, порядок
-						свойств).
-					</li>
-					<li>
-						<b>Автоматизация:</b> интегрируется с редакторами и CI, может автоматически исправлять многие
-						простые нарушения.
-					</li>
-					<li>
-						<b>Расширяемость:</b> множество готовых правил и плагинов (например, для BEM, по использованию
-						кастомных свойств, по порядку CSS-свойств).
-					</li>
-				</ul>
-			</section>
+				<section>
+					<h2>Быстрый старт</h2>
+					<h3>Установка</h3>
+					<h4>Автоматическая настройка через <code>create</code></h4>
+					<p>
+						Stylelint совместим с такими менеджерами пакетов, как npm, bun, pnpm, yarn. Ниже команды для
+						быстрой
+						настройки и установки stylelint в проект:
+					</p>
 
-			<section>
-				<h2>Быстрый старт</h2>
-				<h3>Установка</h3>
-				<h4>Автоматическая настройка через <code>create</code></h4>
-				<p>
-					Stylelint совместим с такими менеджерами пакетов, как npm, bun, pnpm, yarn. Ниже команды для быстрой
-					настройки и установки stylelint в проект:
-				</p>
-
-				<!-- pre snippets for different package managers -->
-				<p><b>npm</b></p>
-				<pre class="code">
+					<!-- pre snippets for different package managers -->
+					<p><b>npm</b></p>
+					<pre class="code">
 				<code>npm create stylelint@latest</code>
 			 </pre>
 
-				<p><b>bun</b></p>
-				<pre class="code">
+					<p><b>bun</b></p>
+					<pre class="code">
 				<code>bun create stylelint@latest</code>
 			</pre>
 
-				<p><b>pnpm</b></p>
-				<pre class="code">
+					<p><b>pnpm</b></p>
+					<pre class="code">
 				<code>pnpm create stylelint@latest</code>
 			</pre>
 
-				<p><b>yarn</b></p>
-				<pre class="code">
+					<p><b>yarn</b></p>
+					<pre class="code">
 				<code>yarn create stylelint@latest</code>
 			</pre>
 
-				<h4>Ручная установка</h4>
-				<ol>
-					<li>
-						<p>Создайте конфиг <code>stylelint.config.js</code> в корне проекта со следующим содержимым:</p>
-						<pre class="code"><code>/** @type {import('stylelint').Config} */
+					<h4>Ручная установка</h4>
+					<ol>
+						<li>
+							<p>Создайте конфиг <code>stylelint.config.js</code> в корне проекта со следующим содержимым:
+							</p>
+							<pre class="code"><code>/** @type {import('stylelint').Config} */
 export default {
   extends: ["stylelint-config-standard"]
 };</code>
 </pre>
-					</li>
+						</li>
 
-					<li>
-						<p>
-							Используйте <code>npm</code> (или другой удобный для вас пакетный менеджер) чтобы скачать
-							необходимые
-							зависимости:
-						</p>
-						<pre class="code"><code>npm add -D stylelint stylelint-config-standard
+						<li>
+							<p>
+								Используйте <code>npm</code> (или другой удобный для вас пакетный менеджер) чтобы
+								скачать
+								необходимые
+								зависимости:
+							</p>
+							<pre class="code"><code>npm add -D stylelint stylelint-config-standard
 </code>
 </pre>
-					</li>
-				</ol>
+						</li>
+					</ol>
 
-				<h3>Использование</h3>
-				<p>Ручной вызов stylelint через терминал (CLI):</p>
-				<pre class="code"><code>npx stylelint "**/*.css"</code>
+					<h3>Использование</h3>
+					<p>Ручной вызов stylelint через терминал (CLI):</p>
+					<pre class="code"><code>npx stylelint "**/*.css"</code>
 </pre>
 
-				<p>
-					Stylelint совместим со многими редакторами кода, т.е. его можно настроить для IDE таким образом,
-					чтобы
-					проверки были автоматическими.
-				</p>
+					<p>
+						Stylelint совместим со многими редакторами кода, т.е. его можно настроить для IDE таким образом,
+						чтобы
+						проверки были автоматическими.
+					</p>
 
-				<p>
-					WebStorm: Stylelint интегрирован внутрь IDE. Для VSCode существует расширение. Для других редакторов
-					кода настройку предлагаю
-					найти самостоятельно по запросу в интернет.
-				</p>
+					<p>
+						WebStorm: Stylelint интегрирован внутрь IDE. Для VSCode существует расширение. Для других
+						редакторов
+						кода настройку предлагаю
+						найти самостоятельно по запросу в интернет.
+					</p>
 
-				<p>Далее разберем настройку под редактор кода Visual Studio Code.</p>
+					<p>Далее разберем настройку под редактор кода Visual Studio Code.</p>
 
-				<!-- vscode setup section -->
-				<h4>Настройка под VSCode</h4>
+					<!-- vscode setup section -->
+					<h4>Настройка под VSCode</h4>
 
-				<ol>
-					<li>
-						<p>
-							Откройте вкладку расширений:
-						</p>
+					<ol>
+						<li>
+							<p>
+								Откройте вкладку расширений:
+							</p>
 
-						<img src="/public/images/stylelint/vscode_setup/step1.webp"
-							alt="Открытие вкладки расширений в VSCode" width="750" />
-					</li>
+							<img src="/public/images/stylelint/vscode_setup/step1.webp"
+								alt="Открытие вкладки расширений в VSCode" width="750" />
+						</li>
 
-					<li>
-						<p>
-							Установите расширение <code>stylelint</code>:
-						</p>
+						<li>
+							<p>
+								Установите расширение <code>stylelint</code>:
+							</p>
 
-						<img src="/public/images/stylelint/vscode_setup/step2.webp"
-							alt="Поиск и установка расширения Stylelint в VSCode" width="750" />
-					</li>
+							<img src="/public/images/stylelint/vscode_setup/step2.webp"
+								alt="Поиск и установка расширения Stylelint в VSCode" width="750" />
+						</li>
 
-					<li>
-						<p>Установите <code>stylelint</code> в проект (смотрите шаги выше)</p>
-					</li>
-				</ol>
+						<li>
+							<p>Установите <code>stylelint</code> в проект (смотрите шаги выше)</p>
+						</li>
+					</ol>
 
-				<h3>Конфигурация</h3>
-				<p>
-					Stylelint требует, чтобы в вашем проекте был конфиг файл.
-				</p>
-				<p>
-					Stylelint, начиная с текущей рабочей директории, начинает искать файл
-					<code>stylelint.config.js</code>.
-					Рекомендуется хранить конфигурацию в корне проекта.
-				</p>
+					<h3>Конфигурация</h3>
+					<p>
+						Stylelint требует, чтобы в вашем проекте был конфиг файл.
+					</p>
+					<p>
+						Stylelint, начиная с текущей рабочей директории, начинает искать файл
+						<code>stylelint.config.js</code>.
+						Рекомендуется хранить конфигурацию в корне проекта.
+					</p>
 
-				<p>Пример базовой конфигурации:</p>
-				<pre class="code"><code>/** @type {import('stylelint').Config} */
+					<p>Пример базовой конфигурации:</p>
+					<pre class="code"><code>/** @type {import('stylelint').Config} */
 export default {
   rules: {
     "block-no-empty": true
@@ -190,25 +200,27 @@ export default {
 };</code>
 </pre>
 
-				<p>
-					Ознакомиться с полным списком возможных настроек можно на официальном сайте -
-					<a href="https://stylelint.io/user-guide/configure"><b>Официальное руководство по конфигурации
-							(stylelint.io)</b>
-					</a>
-				</p>
-			</section>
+					<p>
+						Ознакомиться с полным списком возможных настроек можно на официальном сайте -
+						<a href="https://stylelint.io/user-guide/configure"><b>Официальное руководство по конфигурации
+								(stylelint.io)</b>
+						</a>
+					</p>
+				</section>
 
-			<!-- conclusion section -->
-			<section>
-				<h2>Заключение</h2>
-				<p>
-					Stylelint — мощный инструмент, повышающий качество CSS-кода и упрощающий командную работу. Грамотная
-					интеграция с форматтерами, редакторами и CI позволяет автоматизировать большую часть рутинных
-					проверок и
-					сосредоточиться на дизайне и логике, а не на стиле файла.
-				</p>
-			</section>
-		</div>
+				<!-- conclusion section -->
+				<section>
+					<h2>Заключение</h2>
+					<p>
+						Stylelint — мощный инструмент, повышающий качество CSS-кода и упрощающий командную работу.
+						Грамотная
+						интеграция с форматтерами, редакторами и CI позволяет автоматизировать большую часть рутинных
+						проверок и
+						сосредоточиться на дизайне и логике, а не на стиле файла.
+					</p>
+				</section>
+			</div>
+		</article>
 	</main>
 
 	<footer>
