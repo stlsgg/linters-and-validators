@@ -1,4 +1,6 @@
 // Reusable functions
+
+// Async component loading by given target element
 export async function loadComponent(componentPath, targetElement) {
 	try {
 		const response = await fetch(componentPath);
