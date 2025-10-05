@@ -65,8 +65,26 @@ samp {
     font-family: $font-monospaced;
 }
 
+q,
+blockquote {
+    font-size: $body-size;
+}
+
+ul,
+ol {
+    font-size: $body-size;
+
+    p {
+        font-size: inherit;
+    }
+}
+
 ol {
     list-style: decimal;
+}
+
+ul {
+    list-style: disc;
 }
 
 pre {

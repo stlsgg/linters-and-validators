@@ -1,5 +1,4 @@
 .article {
-    margin: 50px 0;
 
     &__intro {
         margin-bottom: 25px;
@@ -24,6 +23,11 @@
 
         .intro__preview {
             min-width: 300px;
+
+            svg {
+                min-width: 300px;
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -39,6 +43,7 @@
                 &__preview {
                     order: 1;
                     margin-bottom: 20px;
+                    margin-top: 30px;
                     display: flex;
                     width: 70%;
                     align-items: center;

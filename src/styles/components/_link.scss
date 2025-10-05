@@ -1,13 +1,19 @@
 a {
-    all: reset;
     color: $link;
-    outline: 0;
 
     &:hover,
     &:focus,
     &:active,
     &:visited {
         text-decoration: none;
-        color: inherit;
+        color: $link-hover;
+    }
+
+    &:visited {
+        color: $link;
+
+        &:hover {
+            color: $link-hover;
+        }
     }
 }
