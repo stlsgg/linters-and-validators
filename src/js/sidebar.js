@@ -1,13 +1,13 @@
-import { animate, linear } from "animejs";
+import { animate } from "animejs";
 import { spring } from "animejs";
 
 // Sidebar logic, functions, etc.
-function initSidebar() {
+export function initSidebar() {
 	const sidebar = document.getElementById("sidebar");
 	const sbBtn = document.getElementById("sidebar-button");
-	const sbBtnSvg = sbBtn.querySelector("svg");
 
 	if (!sidebar || !sbBtn) return;
+	const sbBtnSvg = sbBtn.querySelector("svg");
 
 	let isActive = false;
 	const hiddenRight = "-240px";
@@ -29,5 +29,3 @@ function initSidebar() {
 		});
 	});
 }
-
-initSidebar();
