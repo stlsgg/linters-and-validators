@@ -20,6 +20,7 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
+    "animejs": "^4.2.0",
     "sass": "^1.93.2"
   }
 }
