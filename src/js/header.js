@@ -12,7 +12,7 @@ export function initBurgerMenu() {
 			icon.classList.toggle("d-none");
 		});
 
-		const burgerMenu = document.querySelector(".burger__menu");
+		const burgerMenu = document.querySelector(".mobile__menu");
 		burgerMenu.classList.toggle("d-none");
 	});
 
