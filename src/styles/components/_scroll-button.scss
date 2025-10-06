@@ -1,0 +1,33 @@
+.scroll-button {
+    width: 60px;
+    height: 60px;
+    opacity: 35%;
+    background-color: $bg-light;
+    color: $text;
+
+    border: 1px solid $border;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 100%;
+        border-color: $primary;
+        color: $primary;
+        box-shadow: 0 0 15px 5px $primary;
+    }
+
+    svg {
+        width: 80%;
+        height: auto;
+    }
+
+    // Position
+    position: fixed;
+    z-index: 9998;
+    bottom: 50px;
+    // right: 50px; -> in shown state
+    right: -70px; // -> in hidden state
+}
