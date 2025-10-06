@@ -3,11 +3,17 @@
     <div class="container header">
         <!-- Navigation for tablets and pc -->
         <div class="hide-md">
+            <div class="header__logo">
+                <img src="/icons/branding/lwt-logo.svg" alt="Learn Web Tools Logo" />
+            </div>
+            <div class="header__wordmark">Learn Web Tools</div>
+
             <nav class="navbar">
                 <a target="_self" href="/" class="btn">Главная</a>
                 <a target="_self" href="/src/pages/about-project.html" class="btn">О проекте</a>
                 <a target="_self" href="/src/pages/articles.html" class="btn">Статьи</a>
                 <a target="_self" href="/src/pages/useful-resources.html" class="btn">Полезные ресурсы</a>
+                <a href="/src/pages/branding.html" target="_self" class="btn">Брендинг</a>
             </nav>
         </div>
 
@@ -31,17 +37,20 @@
 
     <!-- Burger menu -->
     <div class="burger__menu d-none">
-        <a href="/">
+        <a href="/" target="_self">
             Главная
         </a>
-        <a href="/src/pages/about-project.html">
+        <a href="/src/pages/about-project.html" target="_self">
             О проекте
         </a>
-        <a href="/src/pages/articles.html">
+        <a href="/src/pages/articles.html" target="_self">
             Статьи
         </a>
-        <a href="/src/pages/useful-resources.html">
+        <a href="/src/pages/useful-resources.html" target="_self">
             Полезные ресурсы
+        </a>
+        <a href="/src/pages/branding.html" target="_self">
+            Брендинг
         </a>
     </div>
 </header>
