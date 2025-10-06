@@ -9,7 +9,7 @@
 
     <!-- main js -->
     <script type="module" src="/src/main.js" defer></script>
-    <title>Document</title>
+    <title>Prettier - мощный форматтер для вашего кода</title>
 </head>
 
 <body>
@@ -25,6 +25,10 @@
             <div class="article__intro">
                 <div class="intro__text">
                     <h1>Prettier - мощный форматтер для вашего кода</h1>
+                    <p>
+                        Prettier освобождает разработчиков от споров о стиле кода и автоматически приводит
+                        файлы к единому, предсказуемому виду.
+                    </p>
 
                     <div class="intro__ttr">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
@@ -45,8 +49,163 @@
             </div>
 
             <div class="article__body">
-                <section>
-                    <h2>Prettier - что такое?</h2>
+                <section id="what-is-section">
+                    <h2 id="what-is">Что такое Prettier</h2>
+                    <p>
+                        <strong>Prettier</strong> — инструмент для автоматического форматирования исходного кода.
+                        Его цель — убрать человеческий фактор из вопросов стиля: переносы строк, пробелы,
+                        позиционирование
+                        скобок и кавычек форматирует машина, а разработчики концентрируются на логике.
+                    </p>
+                    <blockquote>
+                        <p>
+                            <b>Идея:</b> форматирование — это не обсуждение, а операция, которую выполняет инструмент.
+                            Благодаря этому уменьшается шум в ревью и экономится время команды.
+                        </p>
+                    </blockquote>
+                </section>
+
+                <section id="supported-languages-section">
+                    <h2 id="supported-languages">Поддерживаемые форматы и языки</h2>
+                    <p>Prettier покрывает широкий набор языков и форматов, включая:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Language / Format</th>
+                                <th>Formatting</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://prettier.io/" target="_blank">JavaScript</a> / JSX</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>TypeScript / TSX</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>JSON / JSONC</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>CSS / SCSS / Less</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>HTML</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Markdown</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>YAML</td>
+                                <td><span aria-label="Supported" role="img">✅</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul>
+                        <li>✅: Поддерживается</li>
+                    </ul>
+                </section>
+
+                <section id="about-history-section">
+                    <h2 id="about-history">Короткая история</h2>
+                    <p>
+                        Prettier вырос из практических нужд команд, уставших от вечных споров о стиле. Проект сделал
+                        смелый выбор: минимум опций и автоматическое, детерминированное форматирование. Это помогло
+                        ему быстро стать популярным в сообществе фронтенда.
+                    </p>
+
+                    <blockquote>
+                        <h3 id="funfact-naming-history">Интересный момент</h3>
+                        <p>
+                            Команды часто отмечают: проще согласовать форматирование одной утилитой, чем вести войны
+                            конфигураций в каждом PR.
+                        </p>
+                    </blockquote>
+                </section>
+
+                <section id="ide-support-section">
+                    <h2 id="ide-support">Интеграция с редакторами</h2>
+                    <p>
+                        Prettier легко интегрируется в редакторы: у него есть расширения для <a
+                            href="https://code.visualstudio.com/" target="_blank">VS Code</a>,
+                        плагины для <a href="https://www.jetbrains.com/" target="_blank">JetBrains IDE</a>, и
+                        конфигурации для Neovim/Vim. Самый частый сценарий — автоформатирование при сохранении файла.
+                    </p>
+
+                    <p>
+                        Также Prettier часто подключают в CI, чтобы принудительно поддерживать единый стиль в ветках
+                        и пулл-реквестах.
+                    </p>
+                </section>
+
+                <section id="quick-start-section">
+                    <h2 id="quick-start">Быстрый старт</h2>
+
+                    <h3 id="installation">Установка</h3>
+                    <p>Самый простой способ — через npm:</p>
+                    <pre class="code"><code>npm install --save-dev prettier</code></pre>
+
+                    <h3 id="usage">Использование</h3>
+                    <p>Добавьте скрипт в <code>package.json</code> и запустите форматирование:</p>
+                    <pre class="code"><code>{
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,ts,jsx,tsx,json,css,md}\""
+  }
+}</code></pre>
+
+                    <h3 id="configuration">Конфигурация</h3>
+                    <p>
+                        Prettier минималистичен по опциям: ширина строки, табы vs пробелы, одиночные/двойные кавычки,
+                        конечная запятая и несколько других. Это облегчает принятие конфигурации командой.
+                    </p>
+
+                    <h4 id="vscode-setup">Настройка в VS Code</h4>
+                    <ol>
+                        <li>Установите расширение Prettier из Marketplace.</li>
+                        <li>Включите форматирование при сохранении в настройках.</li>
+                        <li>При необходимости добавьте файл <code>.prettierrc</code> в корень проекта.</li>
+                    </ol>
+                </section>
+
+                <section id="people-discussions-section">
+                    <h2 id="people-discussions">Мнения сообщества</h2>
+                    <p>
+                        Большинство разработчиков ценит Prettier за простоту и экономию времени. Критика обычно связана
+                        с нехваткой гибкости: если вы хотите точечно управлять внешним видом кода, Prettier может
+                        показаться слишком строгим.
+                    </p>
+
+                    <p>
+                        Практический совет: используйте Prettier вместе с линтером (например, ESLint), чтобы
+                        покрыть и форматирование, и семантические правила.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            Prettier — это инструмент для снижения дискуссий о стиле. Если вы хотите избавиться от
+                            мелких споров в команде — он почти всегда помогает.
+                        </p>
+                    </blockquote>
+                </section>
+
+                <section id="conclusion-section">
+                    <h2 id="conclusion">Заключение</h2>
+                    <p>
+                        Prettier — прагматичный инструмент: он не даёт абсолютной гибкости, зато даёт согласованность
+                        и экономию времени. Для большинства проектов — особенно новых и средних по размеру — это
+                        быстрый выигрыш в производительности команды.
+                    </p>
+                    <p>
+                        Если у вас большой проект с историческими правилами форматирования — внедряйте постепенно:
+                        начните с новых файлов, добавьте CI-правила и дайте команде время привыкнуть.
+                    </p>
                 </section>
             </div>
 
@@ -54,13 +213,13 @@
 
     </main>
 
-	<div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-			fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-			<path
-				d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
-		</svg>
-	</div>
+    <div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+            fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+                d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
+        </svg>
+    </div>
 
     <footer>
         <div class="loading loading-lg"></div>
