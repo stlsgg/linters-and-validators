@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="/src/style.css">
+
+    <!-- main js -->
+    <script src="/src/main.js" defer type="module"></script>
     <title>Document</title>
 </head>
 
@@ -16,10 +22,13 @@
     </header>
 
     <main>
-        <article class="article">
+        <article class="article" id="article">
             <div class="article__intro">
                 <div class="intro__text">
-
+                    <h1 id="intro">Гайд по работе с npm</h1>
+                    <p>npm — это менеджер пакетов для Node.js, который позволяет устанавливать, обновлять и управлять
+                        зависимостями вашего проекта. Он является неотъемлемой частью современного
+                        JavaScript-экосистемы.</p>
 
                     <div class="intro__ttr">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
@@ -34,13 +43,132 @@
                 </div>
 
                 <div class="intro__preview">
-                    <svg></svg>
+                    <svg viewBox="0 0 780 250" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z">
+                        </path>
+                    </svg>
                 </div>
 
             </div>
 
             <div class="article__body">
-                <section>
+                <section id="getting-started-section">
+                    <h2 id="getting-started">Начало работы</h2>
+                    <p>npm устанавливается автоматически вместе с Node.js. Чтобы проверить, установлены ли они, откройте
+                        терминал и выполните:</p>
+
+                    <pre class="code"><code>node -v
+npm -v</code></pre>
+
+                    <p>Если вы видите версии в ответ — всё в порядке. Теперь можно инициализировать новый проект.</p>
+
+                    <h3 id="init-project">Инициализация проекта</h3>
+                    <p>Чтобы создать <code>package.json</code> — файл с метаданными и зависимостями проекта — выполните:
+                    </p>
+
+                    <pre class="code"><code>npm init</code></pre>
+
+                    <p>или без вопросов, с настройками по умолчанию:</p>
+
+                    <pre class="code"><code>npm init -y</code></pre>
+                </section>
+
+                <section id="packages-section">
+                    <h2 id="packages">Работа с пакетами</h2>
+                    <p>npm позволяет легко добавлять и управлять библиотеками.</p>
+
+                    <h3 id="install-package">Установка пакета</h3>
+                    <p>Чтобы установить библиотеку и добавить её в зависимости проекта:</p>
+
+                    <pre class="code"><code>npm install lodash</code></pre>
+
+                    <p>или короче:</p>
+
+                    <pre class="code"><code>npm i lodash</code></pre>
+
+                    <h3 id="install-dev">Установка в <code>devDependencies</code></h3>
+                    <p>Если пакет нужен только для разработки (например, тесты, сборка):</p>
+
+                    <pre class="code"><code>npm i -D eslint</code></pre>
+
+                    <p>или эквивалентно:</p>
+
+                    <pre class="code"><code>npm install --save-dev eslint</code></pre>
+                </section>
+
+                <section id="scripts-section">
+                    <h2 id="scripts">npm scripts</h2>
+                    <p>npm позволяет определять собственные команды для автоматизации задач.
+                        Они задаются в разделе <code>"scripts"</code> файла <code>package.json</code>.</p>
+
+                    <pre class="code"><code>{
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "eslint ."
+  }
+}</code></pre>
+
+                    <p>Запуск выполняется через:</p>
+                    <pre class="code"><code>npm run dev</code></pre>
+                </section>
+
+                <section id="update-remove-section">
+                    <h2 id="update-remove">Обновление и удаление пакетов</h2>
+                    <h3 id="update">Обновление</h3>
+                    <p>Чтобы обновить все зависимости до последних минорных версий:</p>
+                    <pre class="code"><code>npm update</code></pre>
+
+                    <p>А чтобы обновить конкретный пакет:</p>
+                    <pre class="code"><code>npm update lodash</code></pre>
+
+                    <h3 id="uninstall">Удаление</h3>
+                    <p>Удалить пакет можно так:</p>
+                    <pre class="code"><code>npm uninstall lodash</code></pre>
+                </section>
+
+                <section id="global-section">
+                    <h2 id="global">Глобальные пакеты</h2>
+                    <p>Иногда полезно установить пакет глобально, чтобы использовать его как CLI-инструмент.</p>
+
+                    <pre class="code"><code>npm install -g typescript</code></pre>
+
+                    <p>Проверить, где установлены глобальные пакеты:</p>
+                    <pre class="code"><code>npm list -g --depth=0</code></pre>
+                </section>
+
+                <section id="useful-commands-section">
+                    <h2 id="useful-commands">Полезные команды</h2>
+
+                    <ul>
+                        <li><code>npm outdated</code> — показать устаревшие зависимости</li>
+                        <li><code>npm audit</code> — проверить проект на уязвимости</li>
+                        <li><code>npm ci</code> — установить зависимости строго по <code>package-lock.json</code></li>
+                        <li><code>npm cache clean --force</code> — очистить кэш</li>
+                    </ul>
+                </section>
+
+                <section id="troubleshooting-section">
+                    <h2 id="troubleshooting">Отладка и решение проблем</h2>
+                    <p>Если при установке пакетов возникают ошибки, попробуйте:</p>
+
+                    <pre class="code"><code>rm -rf node_modules package-lock.json
+npm install</code></pre>
+
+                    <p>Также можно сбросить кэш npm:</p>
+
+                    <pre class="code"><code>npm cache verify
+npm cache clean --force</code></pre>
+
+                    <p>Если ничего не помогает — попробуйте переустановить Node.js.</p>
+                </section>
+
+                <section id="conclusion-section">
+                    <h2 id="conclusion">Заключение</h2>
+                    <p>npm — мощный инструмент, который делает управление зависимостями простым и гибким.
+                        Понимание базовых команд и структуры проекта поможет вам уверенно работать с любыми
+                        JavaScript-проектами.</p>
                 </section>
             </div>
 
@@ -48,13 +176,13 @@
 
     </main>
 
-	<div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-			fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-			<path
-				d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
-		</svg>
-	</div>
+    <div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+            fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+                d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
+        </svg>
+    </div>
 
     <footer>
         <div class="loading loading-lg"></div>
