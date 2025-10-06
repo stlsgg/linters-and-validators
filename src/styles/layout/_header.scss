@@ -50,6 +50,10 @@
         }
 
         &__wordmark {
+            a {
+                color: $text;
+            }
+
             font-weight: 700;
             font-size: $h4-size;
         }
