@@ -2,13 +2,14 @@ import { animate, spring } from "animejs";
 
 // scroll-button.js
 export const scrollButtonSetup = ({
-	introSelector = ".article__intro",
+	element = ".article__intro",
 	offset = 0,
 } = {}) => {
 	const btn = document.getElementById("scroll-button");
 	if (!btn) return;
 
-	const intro = document.querySelector(introSelector);
+	const showAfterThisTarget = document.querySelector(element);
+	if (!showAfterThisTarget) return;
 
 	const scrollUp = () => {
 		animate([document.documentElement, document.body], {
@@ -26,7 +27,7 @@ export const scrollButtonSetup = ({
 		}
 	});
 
-	if ("IntersectionObserver" in window && intro) {
+	if ("IntersectionObserver" in window && showAfterThisTarget) {
 		const io = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -40,11 +41,11 @@ export const scrollButtonSetup = ({
 			{ root: null, threshold: 0 },
 		);
 
-		io.observe(intro);
+		io.observe(showAfterThisTarget);
 	} else {
 		// fallback
-		const threshold = intro
-			? intro.getBoundingClientRect().height - offset
+		const threshold = showAfterThisTarget
+			? showAfterThisTarget.getBoundingClientRect().height - offset
 			: 300;
 		const onScroll = () => {
 			animate(btn, {
@@ -60,5 +61,6 @@ export const scrollButtonSetup = ({
 
 // init
 document.addEventListener("DOMContentLoaded", () => {
-	scrollButtonSetup({ introSelector: ".article__intro", offset: 0 });
+	scrollButtonSetup({ element: ".article__intro", offset: 0 });
+	scrollButtonSetup({ element: ".hero", offset: 0 });
 });
