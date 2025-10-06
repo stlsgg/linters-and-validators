@@ -15,5 +15,5 @@ mainUtils.loadComponent("/src/layout/footer.html", footer);
 // Sidebar loading
 const sidebar = document.getElementById("sidebar");
 mainUtils
-.loadComponent("/src/layout/sidebar.html", sidebar)
-.then(() => initSidebar());
+	.loadComponent("/src/layout/sidebar.html", sidebar)
+	.then(() => initSidebar());
