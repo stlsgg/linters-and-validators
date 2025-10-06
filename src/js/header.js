@@ -7,7 +7,7 @@ export function initBurgerMenu() {
 		return false;
 	}
 	burger_button.addEventListener("click", () => {
-		const icons = burger_button.querySelectorAll("i");
+		const icons = burger_button.querySelectorAll("svg");
 		icons.forEach((icon) => {
 			icon.classList.toggle("d-none");
 		});
