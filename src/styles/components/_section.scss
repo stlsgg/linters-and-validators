@@ -1,0 +1,9 @@
+.section {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        margin-left: 0;
+    }
+}
