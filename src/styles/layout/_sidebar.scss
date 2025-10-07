@@ -5,9 +5,6 @@
     transform: translateY(-50%);
     right: -240px;
 
-    // deadly simple animation
-    transition: right 0.3 ease-in;
-
     // remove dots in li elements
     ul {
         list-style-type: none;
@@ -28,27 +25,17 @@
         transition: border-color 0.3s ease;
 
         &:hover {
-            border-color: $primary;
+            border-color: $secondary;
+            box-shadow: 0 0 10px 1px $secondary;
+
+            svg {
+                fill: $secondary;
+            }
         }
 
         svg {
             fill: $text;
             width: 25px;
-
-            transition: fill 0.3s ease;
-
-            &:hover {
-                fill: $primary;
-            }
-        }
-    }
-
-    &--active {
-        @extend .sidebar;
-        right: 0;
-
-        svg {
-            rotate: 180deg;
         }
     }
 
