@@ -23,72 +23,85 @@
     <header class="loading loading-lg">
     </header>
 
-    <main>
-        <h1>Полезные ресурсы</h1>
-        <hr>
+    <main class="article">
+        <div class="article__intro">
+            <div class="intro__text">
+                <h1>Полезные ресурсы</h1>
+                <p>Страница со списком полезных ресурсов по мнению автора.</p>
+            </div>
+        </div>
 
-        <p>Страница со списком полезных ресурсов по мнению автора.</p>
+        <div class="article__body">
+            <!-- extra articles section -->
+            <section>
+                <h2>Статьи</h2>
+                <ul>
+                    <li>
+                        <p>
+                            <a href="http://catb.org/~esr/faqs/smart-questions.html">Как правильно задавать
+                                вопросы</a> - Eric
+                            Steven
+                            Raymond, Rick Moen
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://news.ycombinator.com/item?id=11070797">Управление конфигурационными файлами
+                                (dotfiles)</a> - StreakyCobra
+                        </p>
+                        <a href="https://wiki.archlinux.org/title/Dotfiles">Что такое dotfiles?</a>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- extra articles section -->
-        <section>
-            <h2>Статьи</h2>
-            <ul>
-                <li>
-                    <a href="http://catb.org/~esr/faqs/smart-questions.html" class="btn">Как правильно задавать
-                        вопросы</a> - Eric
-                    Steven
-                    Raymond, Rick Moen
-                </li>
-                <li>
-                    <p>
-                        <a href="https://news.ycombinator.com/item?id=11070797">Управление конфигурационными файлами
-                            (dotfiles)</a> - StreakyCobra
-                    </p>
-                    <a href="https://wiki.archlinux.org/title/Dotfiles">Что такое dotfiles?</a>
-                </li>
-            </ul>
-        </section>
+            <section>
+                <h2>Ссылки на инструменты</h2>
+                <ul>
+                    <li><a href="https://eslint.org/">ESLint</a></li>
+                    <li><a href="https://stylelint.io/">Stylelint</a></li>
+                    <li><a href="https://validator.w3.org/">W3C Validator</a></li>
+                    <li><a href="https://sass-lang.com/">Sass</a></li>
+                    <li><a href="https://git-scm.com/">Git</a></li>
+                    <li><a href="https://github.com/">Github</a></li>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                    <li><a href="https://biomejs.dev/">Biomejs</a></li>
+                    <li><a href="https://vite.dev/">Vite</a></li>
+                    <li><a href="https://webpack.js.org/">Webpack</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Ссылки на инструменты</h2>
-            <ul>
-                <li><a href="https://eslint.org/">ESLint</a></li>
-                <li><a href="https://stylelint.io/">Stylelint</a></li>
-                <li><a href="https://validator.w3.org/">W3C Validator</a></li>
-                <li><a href="https://sass-lang.com/">Sass</a></li>
-                <li><a href="https://git-scm.com/">Git</a></li>
-                <li><a href="https://github.com/">Github</a></li>
-                <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
-                <li><a href="https://biomejs.dev/">Biomejs</a></li>
-                <li><a href="https://vite.dev/">Vite</a></li>
-                <li><a href="https://webpack.js.org/">Webpack</a></li>
-            </ul>
-        </section>
+            <section>
+                <h2>Репозитории Github</h2>
+                <p>Список полезных открытых репозиториев.
+                </p>
+                <p>
+                    <strong>Важное примечание:</strong> помимо списка ниже, помните, что многие крупные компании
+                    используют
+                    Github как хранилище кода своих приложений. Это значит, что вы можете свободно начать изучение
+                    исходных
+                    кодов работ настоящих профессионалов прямо сейчас!
+                </p>
 
-        <section>
-            <h2>Репозитории Github</h2>
-            <p>Список полезных открытых репозиториев.
-            </p>
-            <p>
-                <strong>Важное примечание:</strong> помимо списка ниже, помните, что многие крупные компании используют
-                Github как хранилище кода своих приложений. Это значит, что вы можете свободно начать изучение исходных
-                кодов работ настоящих профессионалов прямо сейчас!
-            </p>
+                <ul>
+                    <li><a href="https://github.com/sindresorhus/awesome">Awesome lists</a></li>
+                    <li><a href="https://github.com/codecrafters-io/build-your-own-x">Build your own X</a></li>
+                    <li><a href="https://github.com/ripienaar/free-for-dev">Free for dev</a></li>
+                </ul>
+            </section>
 
-            <ul>
-                <li><a href="https://github.com/sindresorhus/awesome">Awesome lists</a></li>
-                <li><a href="https://github.com/codecrafters-io/build-your-own-x">Build your own X</a></li>
-                <li><a href="https://github.com/ripienaar/free-for-dev">Free for dev</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Прочее</h2>
-            <p>Другие полезные инструменты.</p>
-            <ul>
-                <li><a href="https://habr.com">Habr</a> - отличный источник статей по программированию и не только</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Прочее</h2>
+                <p>Другие полезные инструменты.</p>
+                <ul>
+                    <li>
+                        <p>
+                            <a href="https://habr.com">Habr</a> - отличный источник статей по программированию и не
+                            только
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer class="loading loading-lg">
