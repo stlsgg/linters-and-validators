@@ -1,0 +1,33 @@
+.table {
+    width: 100%;
+    border: thin solid $border;
+    background-color: $bg-light;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include body;
+
+    th,
+    td {
+        text-align: center;
+    }
+
+    thead {
+        border-bottom: 3px solid $border;
+        font-weight: 600;
+        color: $text;
+    }
+
+    tbody {
+        color: $text-muted;
+
+        tr {
+            border-bottom: 1px solid $border;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+}
