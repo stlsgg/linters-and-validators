@@ -6,14 +6,14 @@ a {
     &:active,
     &:visited {
         text-decoration: none;
-        color: $link-hover;
+        color: $secondary;
     }
 
     &:visited {
         color: $link;
 
         &:hover {
-            color: $link-hover;
+            color: $secondary;
         }
     }
 }
