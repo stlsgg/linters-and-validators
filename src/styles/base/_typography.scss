@@ -1,9 +1,22 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: $font-general;
+
+    background-color: $bg;
+    color: $text;
+    margin: 0 $space;
+}
+
 .display-lg {
-    @include display-lg
+    @include display-lg;
 }
 
 .display-md {
-    @include display-md
+    @include display-md;
 }
 
 h1 {
@@ -31,31 +44,32 @@ h6 {
 }
 
 .body-xl {
-    @include body-xl
+    @include body-xl;
 }
 
 .body {
-    @include body
+    @include body;
 }
 
 .body-sm {
-    @include body-sm
+    @include body-sm;
 }
 
 .caption {
-    @include caption
+    @include caption;
 }
 
 .caption-sm {
-    @include caption-sm
+    @include caption-sm;
 }
 
 .overline {
-    @include overline
+    @include overline;
 }
 
 p {
     @include body;
+    color: $text-muted;
 }
 
 pre,

@@ -1,4 +1,37 @@
 // card restyling
+.cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .card {
-    background-color: #00000000;
+    background-color: $bg;
+    border: thin solid $border-muted;
+    border-radius: 20px;
+    padding: 20px;
+
+    // anim
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $bg-light;
+        border-color: $border;
+    }
+
+    &__horizontal {
+        @extend .card;
+
+        &:not(&:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__vertical {
+        @extend .card;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
 }

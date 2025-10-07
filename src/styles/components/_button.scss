@@ -1,8 +1,7 @@
 .btn {
-    all: reset;
 
     background-color: $bg;
-    border: 2px solid $border;
+    border: thin solid $border;
     border-radius: 20px;
     color: $text;
 
@@ -12,25 +11,19 @@
     padding: 12px 25px;
     margin: 0 15px;
 
-    &:hover {
-        @extend .btn;
-        background-color: $bg-light;
-        border: 2px solid $border;
-        cursor: pointer;
-    }
-
+    &:hover,
     &:focus {
-        @extend .btn;
-
-        background: $bg-light;
-        border-color: $primary;
+        cursor: pointer;
+        color: $secondary;
+        background-color: $bg-light;
+        border: thin solid $secondary;
+        box-shadow: 0 0 10px 0px $secondary;
     }
 
     &:active {
-        @extend .btn;
-        background: $text;
-        color: $bg;
-        border-color: $border;
+        background-color: $secondary;
+        color: $bg-light;
+        border: thin solid $bg-light;
     }
 
     &-primary {
