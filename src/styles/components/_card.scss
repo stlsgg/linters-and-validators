@@ -1,4 +1,19 @@
 // card restyling
 .card {
-    background-color: #00000000;
+    background-color: $bg;
+    border: 1px solid $border-muted;
+    border-radius: 20px;
+    padding: 20px;
+
+    // anim
+    transition: background-color 0.3s ease-in-out;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        background-color: $bg-light;
+        border-color: $border;
+    }
 }
