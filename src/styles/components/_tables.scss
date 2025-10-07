@@ -3,7 +3,10 @@
     border: thin solid $border;
     background-color: $bg-light;
     border-radius: 20px;
-    overflow: hidden;
+
+    &__responsive {
+        overflow-x: scroll;
+    }
 
     @include body;
 
