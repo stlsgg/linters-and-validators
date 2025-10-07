@@ -10,7 +10,7 @@ export function initSidebar() {
 	const sbBtnSvg = sbBtn.querySelector("svg");
 
 	let isActive = false;
-	const hiddenRight = "-240px";
+	const hiddenRight = "-210px";
 	const shownRight = "0px";
 
 	sbBtn.addEventListener("click", () => {
