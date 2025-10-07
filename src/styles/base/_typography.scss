@@ -67,7 +67,8 @@ h6 {
     @include overline;
 }
 
-p {
+p,
+li {
     @include body;
     color: $text-muted;
 }
