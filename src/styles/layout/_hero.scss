@@ -7,6 +7,10 @@
 
     max-width: 65%;
 
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+
     .btn {
         margin-left: 0;
     }
