@@ -1,5 +1,5 @@
 # url
-https://github.com/stlsgg/learn-web-tools
+https://stlsgg.github.io/linters-and-validators
 
 # Описание проекта
 Сайт по инструментам в веб-разработке. 
