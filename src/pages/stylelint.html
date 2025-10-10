@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Main style -->
+
+	<!-- main js -->
+	<title>Stylelint - линтер для CSS</title>
+  <script type="module" crossorigin src="/linters-and-validators/assets/main-DM3A2Eae.js"></script>
+  <link rel="stylesheet" crossorigin href="/linters-and-validators/assets/main-CbrMdH_a.css">
+</head>
+
+<body>
+	<aside class="loading loading-lg" id="sidebar"></aside>
+
+	<header class="loading loading-lg">
+	</header>
+
+	<main>
+		<article class="article" id="article">
+			<div class="article__intro">
+				<div class="intro__text">
+					<h1>Stylelint</h1>
+					<p>Мощный линтер для CSS, помогающий придерживаться правил написания кода и избегать ошибок.</p>
+
+					<div class="intro__ttr">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+							fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+							<path
+								d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z" />
+						</svg>
+						<p>
+							<span id="ttr"></span>
+						</p>
+					</div>
+
+				</div>
+				<div class="intro__preview">
+					<img src="/linters-and-validators/assets/dark-AsIk_Wca.svg" alt="Stylelint Logo" class="intro__img">
+				</div>
+			</div>
+
+			<div class="article__body">
+				<section>
+					<h2>Что это такое?</h2>
+					<p>
+						Stylelint — современный инструмент для статического анализа CSS и его диалектов (SCSS, Less,
+						PostCSS
+						и
+						др.), который помогает поддерживать единообразие кода, ловить ошибки и автоматизировать
+						приведение
+						CSS-файлов к единому стилю.
+					</p>
+
+					<p>
+						Stylelint используется в таких крупных компаниях, как Google и Github.
+					</p>
+				</section>
+
+				<section>
+					<h2>Преимущества использования</h2>
+					<p>Использовать Stylelint стоит по нескольким причинам:</p>
+
+					<ul>
+						<li>
+							<b>Поиск ошибок:</b> обнаруживает синтаксические ошибки и потенциальные баги
+							(неправильные
+							значения,
+							дублирование свойств).
+						</li>
+						<li>
+							<b>Единый стиль:</b> гарантирует согласованный стиль кода в команде (отступы, кавычки,
+							порядок
+							свойств).
+						</li>
+						<li>
+							<b>Автоматизация:</b> интегрируется с редакторами и CI, может автоматически исправлять
+							многие
+							простые нарушения.
+						</li>
+						<li>
+							<b>Расширяемость:</b> множество готовых правил и плагинов (например, для BEM, по
+							использованию
+							кастомных свойств, по порядку CSS-свойств).
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Быстрый старт</h2>
+					<h3>Установка</h3>
+					<h4>Автоматическая настройка через <code>create</code></h4>
+					<p>
+						Stylelint совместим с такими менеджерами пакетов, как npm, bun, pnpm, yarn. Ниже команды для
+						быстрой
+						настройки и установки stylelint в проект:
+					</p>
+
+					<!-- pre snippets for different package managers -->
+					<pre class="code">
+				<code>npm create stylelint@latest</code>
+			 </pre>
+
+					<h4>Ручная установка</h4>
+					<ol>
+						<li>
+							<p>Создайте конфиг <code>stylelint.config.js</code> в корне проекта со следующим
+								содержимым:
+							</p>
+							<pre class="code"><code>/** @type {import('stylelint').Config} */
+export default {
+  extends: ["stylelint-config-standard"]
+};</code>
+</pre>
+						</li>
+
+						<li>
+							<p>
+								Используйте <code>npm</code> (или другой удобный для вас пакетный менеджер) чтобы
+								скачать
+								необходимые
+								зависимости:
+							</p>
+							<pre class="code"><code>npm add -D stylelint stylelint-config-standard
+</code>
+</pre>
+						</li>
+					</ol>
+
+					<h3>Использование</h3>
+					<p>Ручной вызов stylelint через терминал (CLI):</p>
+					<pre class="code"><code>npx stylelint "**/*.css"</code>
+</pre>
+
+					<p>
+						Stylelint совместим со многими редакторами кода, т.е. его можно настроить для IDE таким
+						образом,
+						чтобы
+						проверки были автоматическими.
+					</p>
+
+					<p>
+						WebStorm: Stylelint интегрирован внутрь IDE. Для VSCode существует расширение. Для других
+						редакторов
+						кода настройку предлагаю
+						найти самостоятельно по запросу в интернет.
+					</p>
+
+					<p>Далее разберем настройку под редактор кода Visual Studio Code.</p>
+
+					<!-- vscode setup section -->
+					<h4>Настройка под VSCode</h4>
+
+					<ol>
+						<li>
+							<p>
+								Откройте вкладку расширений:
+							</p>
+
+							<img src="/linters-and-validators/assets/step1-3fPoAI13.webp"
+								alt="Открытие вкладки расширений в VSCode" width="750">
+						</li>
+
+						<li>
+							<p>
+								Установите расширение <code>stylelint</code>:
+							</p>
+
+							<img src="/linters-and-validators/assets/step2-DhVRfGIX.webp"
+								alt="Поиск и установка расширения Stylelint в VSCode" width="750">
+						</li>
+
+						<li>
+							<p>Установите <code>stylelint</code> в проект (смотрите шаги выше)</p>
+						</li>
+					</ol>
+
+					<h3>Конфигурация</h3>
+					<p>
+						Stylelint требует, чтобы в вашем проекте был конфиг файл.
+					</p>
+					<p>
+						Stylelint, начиная с текущей рабочей директории, начинает искать файл
+						<code>stylelint.config.js</code>.
+						Рекомендуется хранить конфигурацию в корне проекта.
+					</p>
+
+					<p>Пример базовой конфигурации:</p>
+					<pre class="code"><code>/** @type {import('stylelint').Config} */
+export default {
+  rules: {
+    "block-no-empty": true
+  }
+};</code>
+</pre>
+
+					<p>
+						Ознакомиться с полным списком возможных настроек можно на официальном сайте -
+						<a href="https://stylelint.io/user-guide/configure"><b>Официальное руководство по
+								конфигурации
+								(stylelint.io)</b>
+						</a>
+					</p>
+				</section>
+
+				<!-- conclusion section -->
+				<section>
+					<h2>Заключение</h2>
+					<p>
+						Stylelint — мощный инструмент, повышающий качество CSS-кода и упрощающий командную работу.
+						Грамотная
+						интеграция с форматтерами, редакторами и CI позволяет автоматизировать большую часть
+						рутинных
+						проверок и
+						сосредоточиться на дизайне и логике, а не на стиле файла.
+					</p>
+				</section>
+			</div>
+		</article>
+	</main>
+
+	<div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+			fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+			<path
+				d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
+		</svg>
+	</div>
+
+	<footer class="loading loading-lg">
+	</footer>
+
+</body>
+
+</html>

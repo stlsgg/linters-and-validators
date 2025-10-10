@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main style -->
+
+    <!-- main js -->
+    <title>Biomejs - свежий взгляд на веб-разработку</title>
+  <script type="module" crossorigin src="/linters-and-validators/assets/main-DM3A2Eae.js"></script>
+  <link rel="stylesheet" crossorigin href="/linters-and-validators/assets/main-CbrMdH_a.css">
+</head>
+
+<body>
+
+    <header class="loading loading-lg">
+    </header>
+    <aside class="loading loading-lg" id="sidebar"></aside>
+
+    <main>
+        <article class="article" id="article">
+            <div class="article__intro">
+                <div class="intro__text">
+                    <h1>Biomejs - свежий взгляд на веб-разработку</h1>
+                    <p>Biome - инструмент, который уверенно набирает популярность и претендует стать заменой старой
+                        связке ESLint + Prettier.
+                    </p>
+
+                    <div class="intro__ttr">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                            fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z" />
+                        </svg>
+                        <p>
+                            <span id="ttr"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="intro__preview">
+                    <svg viewBox="0 0 1259.2 298.4" xmlns="http://www.w3.org/2000/svg">
+                        <rect id="background" width="100%" height="100%" fill="none" />
+                        <g transform="translate(-51.097 -92.304)" stroke-linecap="square">
+                            <path id="emblem"
+                                d="m225.8 92.304-76.751 132.93c29.122-8.9782 60.452-10.309 90.821-3.146l25.939 6.1226-24.404 103.48-25.976-6.1224c-19.954-4.7072-40.754-0.043-56.841 12.674-8.0467 6.3645-14.386 14.355-18.731 23.319l-24.01-11.616c6.0744-12.545 14.955-23.736 26.172-32.616 22.439-17.761 51.695-24.284 79.549-17.712l12.165-51.574c-43.577-10.273-89.504-0.0432-124.61 27.744-35.106 27.785-55.611 70.142-55.611 114.91l344.58 0.01z"
+                                fill="#60a5fa" stroke-width="26.257" style="paint-order:markers fill stroke" />
+                            <path id="wordmark"
+                                d="m466.57 358.32v-202.64h85.68q20.944 0 35.904 7.072t22.848 20.4q7.888 13.056 7.888 31.824 0 13.328-7.344 25.568-7.344 11.968-24.208 20.128v-20.672q16.048 6.256 24.752 14.96t11.968 19.04q3.264 10.064 3.264 21.216 0 29.92-19.856 46.512t-55.216 16.592zm42.16-36.72h48.416q12.784 0 20.4-7.344t7.616-19.04q0-11.968-7.616-19.312t-20.4-7.344h-48.416zm0-89.76h46.512q9.792 0 15.504-5.44 5.984-5.712 5.984-14.96t-5.984-14.688q-5.712-5.712-15.504-5.712h-46.512zm147.94 126.48v-148.51h40.8v148.51zm0-161.84v-40.8h40.8v40.8zm146.56 165.1q-22.032 0-40.256-10.064-17.952-10.064-28.832-27.472-10.608-17.68-10.608-39.984 0-22.576 10.608-39.984 10.88-17.408 28.832-27.472 18.224-10.064 40.256-10.064t39.984 10.064 28.56 27.472q10.88 17.408 10.88 39.984 0 22.304-10.88 39.984-10.608 17.408-28.56 27.472t-39.984 10.064zm0-36.72q11.152 0 19.312-5.168 8.432-5.168 13.056-14.416 4.896-9.248 4.896-21.216t-4.896-20.944q-4.624-9.248-13.056-14.416-8.16-5.44-19.312-5.44t-19.584 5.44q-8.432 5.168-13.328 14.416-4.624 8.976-4.624 20.944t4.624 21.216q4.896 9.248 13.328 14.416t19.584 5.168zm105.49 33.456v-148.51h38.08v36.176l-4.08-5.984q3.264-17.136 15.776-25.296t29.92-8.16q18.496 0 32.368 9.52 14.144 9.248 17.68 25.024l-11.696 1.088q7.344-18.224 20.944-26.928t31.824-8.704q16.048 0 28.288 7.072 12.512 7.072 19.584 19.856 7.072 12.512 7.072 29.376v95.472h-40.8v-86.768q0-8.704-3.264-14.96-2.992-6.256-8.704-9.792t-13.872-3.536q-7.888 0-13.872 3.536-5.712 3.536-8.976 9.792-2.992 6.256-2.992 14.96v86.768h-40.8v-86.768q0-8.704-3.264-14.96-2.992-6.256-8.704-9.792t-13.872-3.536q-7.888 0-13.872 3.536-5.712 3.536-8.976 9.792-2.992 6.256-2.992 14.96v86.768zm329.64 3.264q-23.664 0-41.072-10.336-17.408-10.608-26.928-28.288t-9.52-39.168q0-22.304 9.792-39.712 10.064-17.408 26.928-27.472t38.08-10.064q17.68 0 31.28 5.712 13.6 5.44 22.848 15.504 9.52 10.064 14.416 23.392 4.896 13.056 4.896 28.56 0 4.352-0.544 8.704-0.272 4.08-1.36 7.072h-111.25v-29.92h88.128l-19.312 14.144q2.72-11.696-0.272-20.672-2.992-9.248-10.608-14.416-7.344-5.44-18.224-5.44-10.608 0-18.224 5.168t-11.424 15.232-2.992 24.48q-1.088 12.512 2.992 22.032t12.512 14.96q8.432 5.168 20.4 5.168 10.88 0 18.496-4.352 7.888-4.352 12.24-11.968l32.64 15.504q-4.352 10.88-13.872 19.04-9.248 8.16-22.032 12.784-12.784 4.352-28.016 4.352z"
+                                fill="currentColor" stroke-width="68.489"
+                                style="font-feature-settings:'ss02';paint-order:markers stroke fill"
+                                aria-label="Biome" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="article__body">
+                <section id="what-is-section">
+                    <h2 id="what-is">Что такое Biome</h2>
+                    <p>
+                        <strong>Biome</strong> — это набор инструментов в единой системе (toolchain), написанная
+                        полностью на <a href="https://rust-lang.org/" target="_blank">Rust</a>.
+                        Она объединяет в себе форматтер и линтер для популярных языков фронтенда.
+                    </p>
+                    <blockquote>
+                        <p>
+                            <b>Интересный факт:</b> Biome не привязан к <a href="/src/pages/npm-guide.html">npm</a> или
+                            каким-либо менеджерам пакетов — это <a
+                                href="https://github.com/biomejs/biome/releases">самодостаточный бинарный файл</a>,
+                            который можно
+                            использовать где угодно.
+                        </p>
+                    </blockquote>
+                </section>
+
+                <section id="supported-languages-section">
+                    <h2 id="supported-languages">Поддерживаемые языки</h2>
+                    <p>Biome охватывает множество языков. Ниже приведена таблица со списком текущих возможностей
+                        инструмента.</p>
+
+                    <div class="table__responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Language</th>
+                                    <th>Parsing</th>
+                                    <th>Formatting</th>
+                                    <th>Linting</th>
+                                    <th>Plugin Support</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://biomejs.dev/internals/language-support/#javascript-support"
+                                            target="_blank">JavaScript</a></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://biomejs.dev/internals/language-support/#typescript-support"
+                                            target="_blank">TypeScript</a></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>JSX</td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>TSX</td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>JSON</td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td>JSONC</td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td><span aria-label="In Progress" role="img">⌛️</span></td>
+                                    <td><span aria-label="In Progress" role="img">⌛️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://biomejs.dev/internals/language-support/#html-super-languages-support"
+                                            target="_blank">Vue</a></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://biomejs.dev/internals/language-support/#html-super-languages-support"
+                                            target="_blank">Svelte</a></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://biomejs.dev/internals/language-support/#html-super-languages-support"
+                                            target="_blank">Astro</a></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Partially supported" role="img">⚠️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://github.com/biomejs/biome/issues/2365" target="_blank">YAML</a>
+                                    </td>
+                                    <td><span aria-label="In Progress" role="img">⌛️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td>GraphQL</td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://github.com/biomejs/biome/issues/3718"
+                                            target="_blank">Markdown</a>
+                                    </td>
+                                    <td><span aria-label="In Progress" role="img">⌛️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                                <tr>
+                                    <td>GritQL</td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Supported" role="img">✅️</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                    <td><span aria-label="Not in Progress" role="img">🚫</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>✅: Поддерживается</li>
+                        <li>🚫: Не поддерживается (не в прогрессе)</li>
+                        <li>⌛️: Активная работа над поддержкой</li>
+                        <li>⚠️: Частично поддерживается (с осторожностью)</li>
+                    </ul>
+
+                </section>
+
+                <section id="about-history-section">
+                    <h2 id="about-history">Немного истории: от Rome к Biome</h2>
+                    <p>
+                        <b>Biome</b> — это официальный форк <a href="https://github.com/iaravindreddyp/rome"
+                            target="_blank">Rome</a>, того самого амбициозного проекта, который пытался объединить
+                        линтер, форматтер, тест-раннер и бандлер в одном флаконе.
+                        В <a href="https://biomejs.dev/blog/announcing-biome/#how-it-started" target="_blank">какой-то
+                            момент</a> разработчики Rome решили продолжить путь отдельно — и так появился Biome.
+                    </p>
+
+                    <blockquote>
+                        <h3 id="funfact-naming-history">Интересный факт про историю названия</h3>
+                        <p lang="en">
+                            “The team wanted to create a second ‘Rome’, a second version of it. So we fused the words
+                            ‘Bis’ and ‘Rome’ — Biome.”
+                        </p>
+                        <p>
+                            Примерный перевод: “Команда хотела создать второй ‘Рим’, его вторую версию. Поэтому мы
+                            объединили слова ‘Бис’ (на латинском "дважды") и ‘Рим’ — получилось Биом”.
+                            Название символично: Biome — это “второй Рим”, продолжающий его наследие, но с более зрелым
+                            подходом и реальной ставкой на производительность.
+                        </p>
+                    </blockquote>
+                </section>
+
+                <section id="ide-support-section">
+                    <h2 id="ide-support">Поддержка <abbr title="Integrated development environment">IDE</abbr></h2>
+                    <p>
+                        У Biome есть две категории расширений: <i>first-party</i> и <i>third-party</i>.
+                    </p>
+                    <p>
+                        <b>First-party</b> расширения для крупных IDE:
+                    </p>
+                    <ul>
+                        <li><a href="https://biomejs.dev/guides/editors/first-party-extensions/#vs-code"
+                                target="_blank">Visual Studio Code</a></li>
+                        <li><a href="https://biomejs.dev/guides/editors/first-party-extensions/#intellij"
+                                target="_blank">IntelliJ</a></li>
+                        <li><a href="https://biomejs.dev/guides/editors/first-party-extensions/#zed"
+                                target="_blank">Zed</a></li>
+                    </ul>
+
+                    <p>
+                        <b><a href="https://biomejs.dev/guides/editors/third-party-extensions/"
+                                target="_blank">Third-party</a></b> расширения:
+                    </p>
+
+                    <ul>
+                        <li>Vim</li>
+                        <li>Neovim</li>
+                        <li>Helix</li>
+                        <li>Sublime Text</li>
+                        <li>Emacs</li>
+                        <li>Nova</li>
+                    </ul>
+                </section>
+
+                <section id="quick-start-section">
+                    <h2 id="quick-start">Быстрый старт</h2>
+
+                    <h3 id="installation">Установка</h3>
+                    <p>
+                        Biome проще всего поставить через менеджер пакетов <code>npm</code>, однако можно скачать и <a
+                            href="https://github.com/biomejs/biome/releases" target="_blank">отдельный бинарный
+                            файл</a>.
+                    </p>
+
+                    <p>Установка через <code>npm</code>:</p>
+                    <pre class="code"><code>npm i -D -E @biomejs/biome</code></pre>
+
+                    <h3>Использование</h3>
+                    <p>Biome предоставляет командный интерфейс (<abbr title="Command Line Interface">CLI</abbr>) для
+                        форматирования и линтинга.</p>
+
+                    <pre class="code"><code># Форматировать все файлы
+npx @biomejs/biome format --write
+
+# Форматировать определенные файлы
+npx @biomejs/biome format --write &lt;files&gt;
+
+# Проверить код и применить безопасные исправления ко всем файлам
+npx @biomejs/biome lint --write
+
+# Проверить код и применить безопасные исправления к определенным файлам
+npx @biomejs/biome lint --write &lt;files&gt;
+
+# Форматирование, линтинг и организация импортов для всех файлов
+npx @biomejs/biome check --write
+
+# Форматирование, линтинг и организация импортов для определенных файлов
+npx @biomejs/biome check --write &lt;files&gt;</code></pre>
+
+                    <h3 id="configuration">Настройка</h3>
+                    <p>
+                        Biome можно использовать и без конфигурационного файла. Но если вы хотите настроить поведение
+                        Biome, можно запустить команду по генерации конфига:
+                    </p>
+                    <pre class="code"><code>npx @biomejs/biome init</code></pre>
+                    <p>Команда создаст в корне проекта <code>biome.json</code> с базовой конфигурацией.</p>
+                    <p>
+                        Подробный разбор настроек вы можете найти на официальном сайте - <a
+                            href="https://biomejs.dev/reference/configuration/"
+                            target="_blank">biomejs.dev/reference/configuration</a>
+                    </p>
+
+                    <h4 id="vscode-setup">Использование в VS Code</h4>
+                    <ol>
+                        <li>Установите <a href="https://marketplace.visualstudio.com/items?itemName=biomejs.biome"
+                                target="_blank">расширение Biome</a> из VS Code Marketplace.</li>
+                        <li>
+                            Добавьте в корень проекта файл <code>biome.json</code> или <a
+                                href="#configuration">сгенерируйте конфиг-файл через <code>npx</code></a>.
+                        </li>
+                        <li>
+                            <p>
+                                Если <code>biome.json</code> создан вручную, скопируйте этот минимальный конфиг:
+                            </p>
+                            <pre class="code"><code>{
+  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+  "formatter": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": false
+  },
+  "assist": {
+    "enabled": false
+  }
+}</code></pre>
+                        </li>
+                    </ol>
+                    <p>
+                        Теперь VS Code сам подхватит конфигурацию, и форматирование/линтинг будут выполняться на лету.
+                    </p>
+
+                    <h4>Как работает конфигурация</h4>
+                    <p>
+                        Biome ищет файл конфигурации рекурсивно от корня проекта к целевой папке.
+                        Например, если вы запускаете:
+                    </p>
+
+                    <pre class="code"><code>biome check project_root/path/to/dir
+</code></pre>
+                    <p>
+                        то Biome будет искать <code>biome.json</code> или <code>.gitignore</code> в следующих местах:
+                        <code>project_root</code> &rarr; <code>path</code> &rarr; <code>to</code> &rarr;
+                        <code>dir</code>.
+                    </p>
+
+                    <p>
+                        Поведение поиска можно менять — часть этих параметров тоже <a
+                            href="https://biomejs.dev/guides/configure-biome/#specifying-files-to-process"
+                            target="_blank">задаётся в конфиге</a>.
+                        Это удобно, если у вас сложная структура или монорепозиторий.
+                    </p>
+                </section>
+
+
+                <section id="people-discussions-section">
+                    <h2 id="people-discussions">Что говорят о Biome разработчики</h2>
+                    <p>
+                        Обсуждения взяты с <a href="https://www.reddit.com/" target="_blank">Reddit</a> и <a
+                            href="https://news.ycombinator.com/news" target="_blank">Hackernews</a>.
+                    </p>
+                    <p>
+                        Настроения в обсуждениях на Hackernews: люди раздражены частыми революциями в инструментах и
+                        обилием несовместимых решений. На Reddit больше про практические подходы, кто и как использует
+                        или использовал, почему перешел и\или почему вернулся к ESLint + Prettier.
+                    </p>
+                    <p>
+                        Ситуация с Biome, как и всегда, не совсем однозначная. На любую идею найдутся как скептики, так
+                        и прагматики, и пессимисты. Однако многие соглашаются с рядом вещей, которые привносит Biome:
+                    </p>
+                    <p>
+                        <b>
+                            Достоинства Biome
+                        </b>
+                    </p>
+                    <ul>
+                        <li>Biome действительно быстрый - благодаря Rust-ядру линтинг и форматирование почти мгновенны;
+                        </li>
+                        <li>
+                            Независим от пакетных менеджеров. Не нужна жесткая привязка к <code>npm</code>,
+                            <code>yarn</code> и другим инструментам управления пакетами. Можно скачать бинарник и
+                            пользоваться;
+                        </li>
+                        <li>
+                            Прост в конфигурации.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <b>
+                            Недостатки продукта:
+                        </b>
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Молодой проект:</b> меньше доверия &rarr; многие остаются на классике (ESLint +
+                            Prettier);
+                        </li>
+                        <li>
+                            <b>WIP:</b> у разработчиков много планов на будущее - поддержка больших языков, система
+                            плагинов, фикс багов и добавление новых фич. Вот некоторые и спросят, "А зачем ждать, когда
+                            есть стабильные, проверенные крупные продукты?";
+                        </li>
+                        <li>
+                            <b>Менее гибок:</b> В отличие от связки ESLint + Prettier, здесь меньше возможностей
+                            подстроить всё под себя.
+                        </li>
+                    </ul>
+
+                    <p>
+                        В целом выделяется тенденция использовать Biome в CI pipeline, небольших проектах, новых
+                        проектах. Но если проект большой, с тяжелыми, кастомными правилами, которые написаны с ESLint +
+                        Prettier, такие проекты лучше продолжать обслуживать с текущим стеком.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            Я лично считаю, что личный опыт превыше опыта других. Можно долго выслушивать чужие мнения и
+                            сомневаться, какой шаг предпринять.
+                            Но стоит опробовать на себе, чтобы понять - действительно ли тебе это нужно.
+                        </p>
+                        <p>
+                            <strong>При этом нужно всегда сохранять здравый смысл.</strong>
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        Советую самостоятельно опробовать инструмент в своих проектах! (да, это мнение автора; я
+                        использую Biome чтобы
+                        форматировать <code>js</code> код, при этом использую ESLint в качестве линтера).
+                    </p>
+                </section>
+
+                <section id="conclusion-section">
+                    <h2 id="conclusion">Заключение</h2>
+                    <p>
+                        Biome — ещё молодой проект, но уже с большим потенциалом.
+                        Он объединяет философию Rome, мощь Rust и современный подход «один инструмент — много задач».
+                        Да, гибкости пока меньше, но скорость и простота компенсируют это сполна.
+                    </p>
+                    <p>
+                        Для новичков — это отличная точка входа: не нужно возиться с ESLint-конфигами и зависимостями.
+                        Для опытных — мощный инструмент в CI-pipeline и хороший способ ускорить разработку.
+                    </p>
+                    <p>
+                        Если у вас свежий проект — Biome может стать отличным выбором. Простота, скорость и минимум
+                        зависимостей.
+                        Если же у вас огромный монолит с тонной ESLint-правил и кастомных плагинов — подумайте дважды:
+                        миграция может быть болью.
+                    </p>
+                    <p>
+                        Biome — это не замена на 100&percnt;, а скорее свежий взгляд на то, каким должен быть
+                        современный
+                        dev-инструмент: быстрым, нативным и минималистичным.
+                    </p>
+                </section>
+
+            </div>
+        </article>
+    </main>
+
+    <div class="scroll-button" id="scroll-button" role="button" aria-label="Наверх" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+            fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+                d="M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z" />
+        </svg>
+    </div>
+
+    <footer class="loading loading-lg">
+    </footer>
+</body>
+
+</html>
