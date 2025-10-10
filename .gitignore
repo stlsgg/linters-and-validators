@@ -30,4 +30,4 @@ biome.json
 *.config.js
 
 # For development reasons, untrack all css files.
-*.css
+# *.css
