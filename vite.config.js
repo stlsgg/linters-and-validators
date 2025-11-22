@@ -35,7 +35,7 @@ function getHtmlInputs() {
 export default defineConfig({
 	// Используем относительный base — удобно для локального просмотра и GitHub Pages.
 	// Если публикуете в репозитории с путём, замените на '/repo-name/'.
-	base: "/",
+	base: "/linters-and-validators/",
 
 	publicDir: "public",
 
